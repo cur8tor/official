@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <title>CURATOR</title>
+  <link rel="shortcut icon" type="image/png" href="../img/cc.png">
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href="home.htm">
+  <img src="../img/pp.png" width="125" height="50" class="center">
+</a>
+
+<body>
+<br>
+<br>
+<br>
+
+<p id="middle">2020 Collection - Photography</p>
+<p id="middle">"Africa"</p>
+
+<br>
+<br>
+
+<div class="slideshow-container2">
+  
+  <div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:500px; height:333px; background-color:white; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+        <img src="../img/pho1.jpg" width="500" height="333" class="center">
+      </div>
+  <div class="text">
+    <img src="../img/pp.png" width="80" height="32" align="left">
+  </div>
+</div>
+
+<div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:300px; height:300px; transform: background-color:red; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+        <img src="../img/pho2.jpg" width="500" height="333" class="center">
+      </div>
+  <div class="text">
+    <img src="../img/pp.png" width="80" height="32" align="left">
+  </div>
+</div>
+
+<div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:300px; height:300px; transform: background-color:blue; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+        <img src="../img/pho3.jpg" width="500" height="333" class="center">
+      </div>
+  <div class="text">
+    <img src="../img/pp.png" width="80" height="32" align="left">
+  </div>
+</div>
+
+  <div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:500px; height:333px; background-color:white; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+        <img src="../img/pho4.jpg" width="500" height="333" class="center">
+      </div>
+  <div class="text">
+    <img src="../img/pp.png" width="80" height="32" align="left">
+  </div>
+</div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div>
+  <p id="middle2">View the extended collection with the CURATOR magazine</p>
+</div>
+
+<br>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[I].className = dots[I].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!-- Automatic slides below -->
+<!--
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
+}
+</script>
+-->
+
+<!-- Manual slides below -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

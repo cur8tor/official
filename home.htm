@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CURATOR</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link rel="shortcut icon" type="image/png" href="../img/cc.png">
+</head>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href="home.htm" class="class2">
+  <img src="../img/pp.png" width="125" height="50" class="center">
+</a>
+
+<body>
+<br>
+<br>
+<br>
+
+<p id="middle">Welcome to the 2020 Collection.</p>
+<br>
+<br>
+
+<div class="slideshow-container">
+  
+  <div style="display: table;" class="mySlides fade">
+    <div id="bob" style="width:300px; height:300px; border-radius:50%; background-color:orange; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+      <a href="pho.htm" class="class1">
+        Photography
+      </a>      
+    </div>
+  <div class="text"> Spring 2020</div>
+</div>
+
+<div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:300px; height:300px; transform: rotate(-90deg); border-radius:50%; background-color:red; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+      <a href="film.htm" class="class1">
+        Film
+      </a>      
+    </div>
+  <div class="text">Spring 2020</div>
+</div>
+
+<div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:300px; height:300px; border-radius:50%; transform: rotate(180deg); background-color:blue; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+      <a href="music.htm" class="class1">
+        Music
+      </a>       
+    </div>
+  <div class="text">Spring 2020</div>
+</div>
+
+<div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:300px; height:300px; border-radius:50%; transform: rotate(0deg); background-color: black; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+      <a href="mag.htm" class="class1">
+        Magazine
+      </a>       
+    </div>
+  <div class="text">Spring 2020</div>
+</div>
+
+<div style="display: table;" class="mySlides fade">
+      <div id="bob" style="width:300px; height:300px; border-radius:50%; background-color: #58D68D; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+">
+      <a href="fash.htm" class="class3">
+        Fashion
+      </a>     
+    </div>
+  <div class="text">Spring 2020</div>
+</div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>  
+  
+</div>
+
+<!-- Automatic slides below -->
+<!--
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+</script>
+-->
+
+<!-- Manual slides below -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+
+</html>
