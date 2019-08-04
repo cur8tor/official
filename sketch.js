@@ -184,8 +184,9 @@ function draw() {
       rect(0, -30, 600, 520, 80);
       noStroke();
       fill(0);
-      textFont('Rock Salt');
-      text('Tank Gam', 0, -150);
+      textSize(60);
+      textFont('Verdana');
+      text('Tank Game', 0, -150);
       //textFont('Helvetica');
       textSize(26);
       fill(0);
