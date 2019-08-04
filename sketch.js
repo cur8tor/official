@@ -184,8 +184,8 @@ function draw() {
       rect(0, -30, 600, 520, 80);
       noStroke();
       fill(0);
-      textFont('Bookman');
-      text('Tank Game', 0, -150);
+      textFont('Rock Salt');
+      text('Tank Gam', 0, -150);
       //textFont('Helvetica');
       textSize(26);
       fill(0);
