@@ -23,6 +23,7 @@
 .simple-subscription-form {
   background: #d1b0ff;
   color: black;
+  font-family:courier;
   padding: 2rem;
   border-radius: 0;
   width: 500;
@@ -35,6 +36,7 @@
 .simple-subscription-form .button {
   margin-bottom: 0;
   color: black;
+  font-family:courier;
   border-radius: 0 0 0 0;
 }
 
