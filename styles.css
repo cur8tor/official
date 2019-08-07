@@ -21,10 +21,10 @@
   height: 20px;
 }
 .simple-subscription-form {
-  background: #fa98dd;
+  background: #ffd1f1;
   color: #fefefe;
   padding: 2rem;
-  border-radius: 10%;
+  border-radius: 0;
 }
 
 .simple-subscription-form .button {
