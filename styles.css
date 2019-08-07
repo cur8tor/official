@@ -22,13 +22,15 @@
 }
 .simple-subscription-form {
   background: #ffd1f1;
-  color: #fefefe;
+  color: black;
   padding: 2rem;
   border-radius: 0;
+  width: 500;
 }
 
 .simple-subscription-form .button {
   margin-bottom: 0;
+  color: black;
   border-radius: 0 0 0 0;
 }
 
