@@ -21,11 +21,15 @@
   height: 20px;
 }
 .simple-subscription-form {
-  background: #ffd1f1;
+  background: #d1b0ff;
   color: black;
   padding: 2rem;
   border-radius: 0;
   width: 500;
+  text-align:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .simple-subscription-form .button {
