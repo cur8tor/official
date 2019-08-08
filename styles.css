@@ -21,17 +21,18 @@
   height: 20px;
 }
 .simple-subscription-form {
-  background: #91bf91;
+  background: #ffd4de;
   color: black;
   font-family:courier;
   padding: 2rem;
   border-radius: 30%;
-  width: 500;
-  height: 500;
+  width: 250;
+  height: 250;
   text-align:center;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  vertical-align: middle;
 }
 
 .simple-subscription-form .button {
