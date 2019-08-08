@@ -216,3 +216,11 @@ A.class3:active {text-decoration: none; color: black; background-color: #F1948A;
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 0;
+}
+
+
