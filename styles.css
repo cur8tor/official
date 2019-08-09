@@ -4,13 +4,14 @@
   font-family:courier;
   vertical-align: middle;
   height: 10px;
+  font-size: 30px;
+  font-decoration: bold;
 }
 #middle4 {
   text-align:center;
   font-family:courier;
   vertical-align: middle;
   height: 10px;
-  font-size: 10px;
 }
 #cup {
   text-align:center;
