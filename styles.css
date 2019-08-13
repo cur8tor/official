@@ -1,7 +1,7 @@
 
 .jill input[type="text"] {
   border: none;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid white;
   background: transparent;
   outline: none;
   font-family:courier;
