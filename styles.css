@@ -65,12 +65,10 @@
   transform: translate(-50%, -50%);
   animation-name: example2;
   animation-duration: 3s;
-  animation-timing-function: ease;
   animation-delay: 1s;
   animation-fill-mode: both;
   -webkit-animation-name: example2;
   -webkit-animation-duration: 3s;
-  -webkit-animation-timing-function: ease;
   -webkit-animation-delay: 1s;
   -webkit-animation-fill-mode: both;
 }
