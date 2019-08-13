@@ -38,13 +38,13 @@
   padding: 25px;
   animation-name: example;
   animation-duration: 3s;
-  animation-delay: 1s;
+  animation-delay: 0s;
   animation-timing-function: ease;
   animation-fill-mode: backwards;
   -webkit-animation-name: example;
   -webkit-animation-duration: 3s;
   -webkit-animation-timing-function: ease;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-delay: 0s;
   -webkit-animation-fill-mode: backwards;
 }
 @keyframes example {
@@ -75,11 +75,11 @@
   -webkit-animation-fill-mode: both;
 }
 @keyframes example2 {
-  0%   {left:45%; top:45%;}
+  0%   {left:50%; top:50%;}
   100% {left:50%; top:20%;}
 }
 @-webkit-keyframes example {
-  0%   {left:45%; top:45%;}
+  0%   {left:50%; top:50%;}
   100% {left:50%; top:20%;}
 }
 
