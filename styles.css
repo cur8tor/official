@@ -29,11 +29,11 @@
   -webkit-animation-fill-mode: both;
 }
 @keyframes example {
-  0%   {background-color:#ff9999; left:50%; top:300%;}
+  0%   {background-color:#99ffbd; left:50%; top:300%;}
   100% {background-color:#99ffbd; left:50%; top:50%;}
 }
 @-webkit-keyframes example {
-  0%   {background-color:#ff9999; left:50%; top:300%;}
+  0%   {background-color:#99ffbd; left:50%; top:300%;}
   100% {background-color:#99ffbd; left:50%; top:50%;}
 }
 
