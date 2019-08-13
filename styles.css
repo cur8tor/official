@@ -40,20 +40,20 @@
   animation-duration: 3s;
   animation-delay: 0s;
   animation-timing-function: ease;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both;
   -webkit-animation-name: example;
   -webkit-animation-duration: 3s;
   -webkit-animation-timing-function: ease;
   -webkit-animation-delay: 0s;
-  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: both;
 }
 @keyframes example {
   0%   {background-color:red; left:50%; top:300%;}
-  100% {background-color:red; left:50%; top:50%;}
+  100% {background-color:pink; left:50%; top:50%;}
 }
 @-webkit-keyframes example {
   0%   {background-color:red; left:50%; top:300%;}
-  100% {background-color:red; left:50%; top:50%;}
+  100% {background-color:pink; left:50%; top:50%;}
 }
 
 .moose {
