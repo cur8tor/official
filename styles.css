@@ -7,24 +7,6 @@
   font-family:courier;
   height: 40px;
 }
-.jill input[type="submit"] {
-  border: none;
-  font-color: red;
-  font-family:courier;
-  background-color: white;
-  height: 20px;
-  width: 80px;
-  border-radius: 0%;
-}
-.jill input:hover[type="submit"] {
-  border: none;
-  color: white;
-  font-family:courier;
-  background-color: black;
-  height: 20px;
-  width: 80px;
-  border-radius: 0%;
-}
 
 .jill {
   background-color: pink;
@@ -47,12 +29,12 @@
   -webkit-animation-fill-mode: both;
 }
 @keyframes example {
-  0%   {background-color:red; left:50%; top:300%;}
-  100% {background-color:pink; left:50%; top:50%;}
+  0%   {background-color:#ff9999; left:50%; top:300%;}
+  100% {background-color:#99ffbd; left:50%; top:50%;}
 }
 @-webkit-keyframes example {
-  0%   {background-color:red; left:50%; top:300%;}
-  100% {background-color:pink; left:50%; top:50%;}
+  0%   {background-color:#ff9999; left:50%; top:300%;}
+  100% {background-color:#99ffbd; left:50%; top:50%;}
 }
 
 .moose {
