@@ -18,19 +18,22 @@
   </form>
 </div>
 <script>
-let de= 0;
+let aa= 0;
  function myFunction(event) {
   var x = event.which || event.keyCode;
-  if (x==49){
-    de += 1;
+  if (x==48){
+    aa = 1;
   }
-  else if (x==50){
+  else if (x==54){
     ab = 1;
   }
-  else if (x==48){
+  else if (x==57){
     ac = 1;
   }
-  if (de==2&&ab==1&&ac==1){
+  else if (x==50){
+    ad = 1;
+  }
+  if (aa&&ab&&ac&&ad==1){
     window.location.replace("https://thecrtr.com/menu.htm");
   }
 }
