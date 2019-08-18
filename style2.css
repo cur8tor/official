@@ -66,14 +66,19 @@ p {
   100% {left:25%; right:25%; top:50%;}
 }
 .bully {
-  border-style: solid;
+  border-style: ridge;
   border-width: 3px;
   border-color: white;
-  width: 800px;
+  width: 700px;
   text-align:center;
   font-family:courier;
   vertical-align: middle;
   font-size: 10px;
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+  /*background-color: orange;*/
+  margin: 70px;
 }
 input[type="text"] {
   font-size:100px;
