@@ -218,8 +218,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin: 70px;
 }
 .ball1 {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #BFD8D2;
   background-color: #4717F6;
@@ -228,8 +228,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 40px;
 }
 .ball2 {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #FEDCD2;
   background-color: #4717F6;
@@ -238,8 +238,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 40px;
 }
 .ball3 {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #DF744A;
   background-color: #4717F6;
@@ -248,8 +248,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 0px;
 }
 .ball4 {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   font-family: courier;
   background-color: #DF744A;
   background-color: #A239CA;
@@ -258,8 +258,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 100px;
 }
 .ball5 {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   font-family: courier;
   background-color: #FEDCD2;
   background-color: #A239CA;
@@ -268,8 +268,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 100px;
 }
 .ball6 {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   font-family: courier;
   background-color: #BFD8D2;
   background-color: #A239CA;
