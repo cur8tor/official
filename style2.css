@@ -65,6 +65,11 @@ p {
   0%   {left:25%; right:25%; top:300%;}
   100% {left:25%; right:25%; top:50%;}
 }
+.bully {
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+}
 input[type="text"] {
   font-size:100px;
   height: 150px;
