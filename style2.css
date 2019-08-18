@@ -70,6 +70,10 @@ p {
   border-width: 3px;
   border-color: white;
   width: 800px;
+  text-align:center;
+  font-family:courier;
+  vertical-align: middle;
+  font-size: 10px;
 }
 input[type="text"] {
   font-size:100px;
