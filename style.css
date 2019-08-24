@@ -25,7 +25,7 @@ p {
 .shrink {
   animation-name: one;
   animation-duration: 3s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 .b {
@@ -42,7 +42,7 @@ p {
   z-index: 4;
   animation-name: two;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 @keyframes two {
