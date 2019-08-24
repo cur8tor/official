@@ -205,7 +205,7 @@ A.class2:hover {text-decoration: underline;; color: white; background-color: non
 A.class2:active {text-decoration: none; color: white; background-color: black;}
 
 A.class2b {color:red;}
-A.class2b:link  {text-decoration: none; color: white; background-color: none; padding: 5px; height: 100px; line-height: 100px; font-size: 12.5px;}
+A.class2b:link  {text-decoration: none; color: white; background-color: none; padding: 5px; height: 150px; line-height: 150px; font-size: 12.5px;}
 A.class2b:visited {text-decoration: none; color: white; background-color: white; width: 300px;}
 A.class2b:hover {text-decoration: none; color: white; background-color: none;}
 A.class2b:active {text-decoration: none; color: white; background-color: black;}
@@ -291,4 +291,19 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   display: inline-block;
   border-radius: 0%;
   margin-right: 0px;
+  box-shadow: 0px 0px 40px 20px #0ff;
+  animation-name: blue;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes blue {
+0%   {  box-shadow: 0px 0px 40px 20px #000;  transform: rotate(0deg);
+}
+50% {  box-shadow: 0px 0px 40px 20px #0ff;  transform: rotate(30deg);
+}
+70%   {  box-shadow: 0px 0px 40px 20px #000;  transform: rotate(0deg);
+}
+100%   {  box-shadow: 0px 0px 40px 20px #000;}
 }
