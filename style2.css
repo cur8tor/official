@@ -26,7 +26,7 @@ p {
   0%   {background-color:#99ffbd; transform:scale(1); z-index: 1;}
   100% {background-color:#99ffbd; transform:scale(0); z-index: 1;}
 }
-.img{
+.shrink {
   animation-name: one;
   animation-duration: 3s;
   animation-delay: 3s;
@@ -64,6 +64,21 @@ p {
 -webkit-@keyframes two {
   0%   {left:25%; right:25%; top:300%;}
   100% {left:25%; right:25%; top:50%;}
+}
+.bully {
+  border-style: ridge;
+  border-width: 3px;
+  border-color: white;
+  width: 700px;
+  text-align:center;
+  font-family:courier;
+  vertical-align: middle;
+  font-size: 10px;
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+  /*background-color: orange;*/
+  margin: 70px;
 }
 input[type="text"] {
   font-size:100px;
@@ -218,8 +233,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin: 70px;
 }
 .ball1 {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #BFD8D2;
   background-color: #4717F6;
@@ -228,8 +243,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 40px;
 }
 .ball2 {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #FEDCD2;
   background-color: #4717F6;
@@ -238,8 +253,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 40px;
 }
 .ball3 {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #DF744A;
   background-color: #4717F6;
