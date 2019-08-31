@@ -293,13 +293,14 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 0px;
   box-shadow: 0px 0px 40px 20px #0ff;
   animation-name: blue;
-  animation-duration: 2s;
-  animation-delay: 0s;
+  animation-duration: 4s;
   animation-iteration-count:infinite;
 }
 
 @keyframes blue {
 0%   {box-shadow: 0px 0px 40px 20px #000;  }
-50% {box-shadow: 0px 0px 40px 20px #0ff; transform: rotate(30deg);}
-70%   {box-shadow: 0px 0px 40px 20px #000;}
-100%   {box-shadow: 0px 0px 40px 20px #000; transform: rotate(360deg)}}
+25% {box-shadow: 0px 0px 40px 20px #0ff; transform: rotate(30deg);}
+35%   {box-shadow: 0px 0px 40px 20px #000;}
+50%   {box-shadow: 0px 0px 40px 20px #000; transform: rotate(360deg)}
+100%   {box-shadow: 0px 0px 40px 20px #000; transform: rotate(360deg)}
+}
