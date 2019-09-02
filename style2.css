@@ -1,5 +1,5 @@
 .body1 {
-  background-color: black;
+  background-color: white;
   vertical-align: middle;
 }
 p {
@@ -236,8 +236,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   width: 150px;
   height: 150px;
   font-family: courier;
-  background-color: #BFD8D2;
   background-color: #4717F6;
+  background-color: black;
   display: inline-block;
   border-radius: 50%;
   margin-right: 40px;
@@ -246,8 +246,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   width: 150px;
   height: 150px;
   font-family: courier;
-  background-color: #FEDCD2;
   background-color: #4717F6;
+  background-color: black;
   display: inline-block;
   border-radius: 50%;
   margin-right: 40px;
@@ -256,8 +256,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   width: 150px;
   height: 150px;
   font-family: courier;
-  background-color: #DF744A;
   background-color: #4717F6;
+  background-color: black;
   display: inline-block;
   border-radius: 50%;
   margin-right: 0px;
@@ -266,8 +266,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   width: 200px;
   height: 200px;
   font-family: courier;
-  background-color: #DF744A;
   background-color: #A239CA;
+  background-color: black;
   display: inline-block;
   border-radius: 0%;
   margin-right: 100px;
@@ -276,8 +276,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   width: 200px;
   height: 200px;
   font-family: courier;
-  background-color: #FEDCD2;
   background-color: #A239CA;
+  background-color: black;
   display: inline-block;
   border-radius: 0%;
   margin-right: 100px;
@@ -286,8 +286,8 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   width: 200px;
   height: 200px;
   font-family: courier;
-  background-color: #BFD8D2;
   background-color: #A239CA;
+  background-color: black;
   display: inline-block;
   border-radius: 0%;
   margin-right: 0px;
