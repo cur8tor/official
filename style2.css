@@ -199,15 +199,15 @@ A.class1:hover {text-decoration: none; color: black; background-color: white; wi
 A.class1:active {text-decoration: none; color: black; background-color: white;}
 
 A.class2 {color:red;}
-A.class2:link  {text-decoration: none;;; color: white; background-color: none; padding: 10px; height: 200px; line-height: 200px; font-size: 25px;}
+A.class2:link  {text-decoration: none;;; color: white; background-color: none; padding: 10px; height: 150px; line-height: 150px; font-size: 25px;}
 A.class2:visited {text-decoration: underline;;; color: white; background-color: white; width: 300px;}
 A.class2:hover {text-decoration: underline;; color: white; background-color: none; width: 300px;}
 A.class2:active {text-decoration: none; color: white; background-color: black;}
 
 A.class2b {color:red;}
-A.class2b:link  {text-decoration: none; color: white; background-color: none; padding: 5px; height: 150px; line-height: 150px; font-size: 12.5px;}
-A.class2b:visited {text-decoration: none; color: white; background-color: white; width: 300px;}
-A.class2b:hover {text-decoration: none; color: white; background-color: none;}
+A.class2b:link  {text-decoration: none; color: white; background-color: white; display:block; border-radius: 0%;padding: 10px,10px; height: 150px; width: 150px; line-height: 150px; font-size: 20px;}
+A.class2b:visited {text-decoration: none; color: white; background-color: white;}
+A.class2b:hover {text-decoration: none; color: black; background-color: none; box-shadow: 0px 0px 40px 20px #fff;}
 A.class2b:active {text-decoration: none; color: white; background-color: black;}
 
 .outer {
@@ -230,7 +230,7 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-left: 25%;
   margin-right: 25%;
   /*background-color: orange;*/
-  margin: 70px;
+  /*margin: 70px;*/
 }
 .ball1 {
   width: 150px;
@@ -263,44 +263,56 @@ A.class2b:active {text-decoration: none; color: white; background-color: black;}
   margin-right: 0px;
 }
 .ball4 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #A239CA;
   background-color: black;
   display: inline-block;
   border-radius: 0%;
-  margin-right: 100px;
+  margin-right: 40px;
 }
 .ball5 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 10px;
   font-family: courier;
   background-color: #A239CA;
   background-color: black;
   display: inline-block;
   border-radius: 0%;
-  margin-right: 100px;
+  margin-right: 40px;
 }
 .ball6 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   font-family: courier;
   background-color: #A239CA;
   background-color: black;
   display: inline-block;
-  border-radius: 0%;
+  border-radius: 50%;
   margin-right: 0px;
-  box-shadow: 0px 0px 40px 20px #0ff;
-  animation-name: blue;
-  animation-duration: 8s;
-  animation-iteration-count:infinite;
+  /*animation-name: blue;*/
+  animation-delay: 2s;
+  animation-duration: 5s;
+  /*animation-iteration-count:infinite;*/
+  animation-fill-mode: backwards;
+  -webkit-animation-name: blue;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count:infinite;
 }
 
 @keyframes blue {
-0%   {box-shadow: 0px 0px 40px 20px #000;  }
-15% {box-shadow: 0px 0px 40px 20px #0ff; transform: rotate(30deg);}
-25%   {box-shadow: 0px 0px 40px 20px #000;}
-30%   {box-shadow: 0px 0px 40px 20px #000; transform: rotate(360deg)}
-100%   {box-shadow: 0px 0px 40px 20px #000; transform: rotate(360deg)}
+0%   {box-shadow: none;}
+100% {border-radius: 50%;}
+}
+
+-webkit-@keyframes blue {
+0%   {box-shadow: none;}
+5%   {box-shadow: 0px 0px 40px 20px #fff;  }
+15% {box-shadow: 0px 0px 40px 20px #fff; transform: rotate(90deg);}
+25%   {box-shadow: none;}
+30%   {box-shadow: none; }
+99%   {box-shadow: none; }
+100%   {box-shadow: none;}
 }
