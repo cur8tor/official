@@ -3,40 +3,27 @@
 <head>
   <link rel="stylesheet" href="styles.css"/>
   <title>CURATOR</title>
-  <link rel="shortcut icon" type="image/png" href=cc.png">
+  <link rel="shortcut icon" type="image/png" href="cc.png">
 </head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+<!--
 <a href="menu.htm">
   <img src="pp.png" width="125" height="50" class="center">
 </a>
-
+<br>
+-->
 <body>
-<br>
-<br>
-<br>
-
-<p id="middle">2020 Collection - Photography</p>
-<p id="middle">"Africa"</p>
-
-<br>
-<br>
 
 <div class="slideshow-container2">
-  
+
   <div style="display: table;" class="mySlides fade">
-      <div id="bob" style="width:500px; height:333px; background-color:white; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+      <div id="bob" style="width:750px; height:500px; background-color:white; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
 ">
-        <img src="pho1.jpg" width="500" height="333" class="center">
+        <img src="pho1.jpg" width=1125 height=750 class="center">
       </div>
   <div class="text">
     <img src="pp.png" width="80" height="32" align="left">
@@ -44,9 +31,9 @@
 </div>
 
 <div style="display: table;" class="mySlides fade">
-      <div id="bob" style="width:300px; height:300px; transform: background-color:red; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+      <div id="bob" style="width:750px; height:500px; transform: background-color:red; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
 ">
-        <img src="pho2.jpg" width="500" height="333" class="center">
+        <img src="pho2.jpg" width=1125 height=750 class="center">
       </div>
   <div class="text">
     <img src="pp.png" width="80" height="32" align="left">
@@ -54,9 +41,9 @@
 </div>
 
 <div style="display: table;" class="mySlides fade">
-      <div id="bob" style="width:300px; height:300px; transform: background-color:blue; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
+      <div id="bob" style="width:750px; height:500px; transform: background-color:blue; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
 ">
-        <img src="pho3.jpg" width="500" height="333" class="center">
+        <img src="pho3.jpg" width=1125 height=750 class="center">
       </div>
   <div class="text">
     <img src="pp.png" width="80" height="32" align="left">
@@ -66,7 +53,7 @@
   <div style="display: table;" class="mySlides fade">
       <div id="bob" style="width:500px; height:333px; background-color:white; text-align:center; vertical-align: middle; display: table-cell; vertical-align: middle;
 ">
-        <img src="pho4.jpg" width="500" height="333" class="center">
+        <img src="pho4.jpg" width=1125 height=750 class="center">
       </div>
   <div class="text">
     <img src="pp.png" width="80" height="32" align="left">
@@ -99,15 +86,15 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[I].className = dots[I].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 </script>
@@ -123,14 +110,14 @@ function showSlides() {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {slideIndex = 1}
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 6000); // Change image every 2 seconds
 }
@@ -154,15 +141,15 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 </script>
