@@ -220,11 +220,11 @@ A.class3:active {text-decoration: none; color: black; background-color: #F1948A;
   border-radius: 50%;
 }
 .slideshow-container2 {
-  max-width: 1125;
-  max-height: 750;
+  max-width: 900;
+  max-height: 600;
   position: relative;
   margin: auto;
-  border-radius: 50%;
+  transform: translateY(10%);
 }
 
 /* Next & previous buttons */
