@@ -33,7 +33,10 @@ p {
   animation-duration: .5s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
-
+  -webkit-animation-name: main2;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
 }
 @keyframes main2 {
   0%   {}
@@ -50,7 +53,7 @@ p {
   animation-fill-mode: forwards;
   -webkit-animation-name: one;
   -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
 }
 @keyframes one {
@@ -93,6 +96,10 @@ p {
   animation-duration: .5s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
+  -webkit-animation-name: two;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
 }
 @keyframes two {
   0%   {opacity: 0}
