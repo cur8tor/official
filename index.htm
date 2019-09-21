@@ -9,12 +9,12 @@
  <meta charset="UTF-8">
 <body class="body1">
 
-<div class="a" onclick="myFunction()">
-  <img src="logo.png" class="shrink" style="width:465; height:170;"></img>
+<div class="a" id="as" onclick="myFunction()">
+  <img src="logo.png" class="shrink" style="width:470; height:170;"></img>
 </div>
 <div class="b" id="bs" onclick="myFunction()">
   <form action="index.htm" method="post" autofocus>
-      <input type="text" placeholder="pin" name="password" onkeypress="myFunction(event)">
+      <input type="text" placeholder="" maxlength="7"name="password" style="text-align:center;color: red;" onkeypress="myFunction(event)">
       <br>
   </form>
 </div>
@@ -24,6 +24,9 @@ let aa= 0;
 
    var d = document.getElementById("bs");
    d.className += " otherclass";
+
+   var duh = document.getElementById("as");
+   duh.className += " otherclass";
 
   var x = event.which || event.keyCode;
   if (x==48){
