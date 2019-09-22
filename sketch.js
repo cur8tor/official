@@ -331,13 +331,13 @@ function draw() {
       noStroke();
       if (click === 1) {
         fill(0, 255, 255);
-        ellipse(-70, 100, rip);
+        //ellipse(-70, 100, rip);
       } else if (click === 2) {
         fill(255, 0, 0);
-        ellipse(70, 100, rip);
+        //ellipse(70, 100, rip);
       } else if (click === 4) {
         fill(255, 255, 0);
-        ellipse(0, 0, rip);
+        //ellipse(0, 0, rip);
       }
       pop();
       if (rip <= 2500) {
@@ -409,7 +409,7 @@ function draw() {
         if (four.health <= 0) {
           four = null;
           aok += 1;
-        } 
+        }
       } else if (aok === 1) {
       	text('use WASD to move', windowWidth/2, windowHeight/2 - 280);
         //toot+= 1;
@@ -441,7 +441,7 @@ function draw() {
         ellipse(250, 250, 40, 40);
         text('over here!', 250, 230);
         pop();
-        
+
         var jip = dist(tank1.pos.x, tank1.pos.y, 250, 250);
         if (jip < 40) {
           toot += 1;
@@ -709,7 +709,7 @@ function draw() {
           push();
      		 translate(windowWidth / 2, windowHeight / 2);
      		 noStroke();
-          
+
           var ih = 0;
           while (ih === 0) {
     		  if (click === 1) {
@@ -729,7 +729,7 @@ function draw() {
            ih++;
          }
         }
-          
+
           push();
         translate(windowWidth / 2, windowHeight / 2);
         if (rip >= 1500) {
