@@ -203,6 +203,12 @@ A.class3:visited {text-decoration: none; color: white; background-color: black;}
 A.class3:hover {text-decoration: none; color: black; background-color: #F1948A;}
 A.class3:active {text-decoration: none; color: black; background-color: #F1948A;}
 
+A.class4 {color:white;}
+A.class4:link  {text-decoration: none; color: white; background-color: white; padding: 10px 10px;}
+A.class4:visited {text-decoration: none; color: white; background-color: white;}
+A.class4:hover {text-decoration: none; color: white; background-color: white;}
+A.class4:active {text-decoration: none; color: white; background-color: white;}
+
 .pink {
   display: table-cell;
   vertical-align: middle;
