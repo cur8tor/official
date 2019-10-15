@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style2.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <title>CURATOR</title>
+  <link rel="shortcut icon" type="image/png" href="roundLogo.png">
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<body>
+<div class="trans"></div>
+<div class="transition-fade">
+<div class="qOuter">
+<div class="qPink">
+<div class="qInner" style="background-color:white;">
+  <div style="margin-bottom: 40px; margin-top: 40px;">
+    <a href="fash.htm">
+      <img src="pp.png" width="125" height="50" class="center">
+    </a>
+  </div>
+<div class="mBall1">
+  <img src="shop1.png" width="400px" height="600px" class="class2b">
+</div>
+<div class="mBall1">
+  <img src="listing.png" width="400px" height="600px" class="class2b">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
