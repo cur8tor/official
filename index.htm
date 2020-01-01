@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="style2.css"/>
   <link rel="stylesheet" href="style.css"/>
   <title>CURATOR</title>
   <link rel="shortcut icon" type="image/png" href="roundLogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
 </head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta charset="UTF-8">
- <style>
-   body {
-     background-color: black;
-   }
- </style>
-<body class="body1">
+<style>
+  body {
+    background-color: black;
+  }
+</style>
 
-<div class="a" id="as" onclick="myFunction()">
-  <img src="logoWhite.png" class="shrink" style="width:450; height:180;"></img>
+<body>
+<div class="trans2"></div>
+<div>
+<div class="transition-fade">
+<div class="outer" style="min-width:1080px;">
+<div class="pink">
+  <div class="inner" style="margin-bottom: 50px;">
+    <img src="logoWhite.png" width="538" height="200"class="center">
+ </div>
+  <div class="inner">
+    <div class="ball1">
+     <a href="pho.htm" class="class2b">Photography</a>
+    </div>
+    <div class="ball5">
+      <a href="mag.htm" class="class2b">Magazine</a>
+    </div>
+    <div class="ball6">
+      <a href="fash.htm" class="class2b">Fashion</a>
+    </div>
+  </div>
+
+  <div class="inner">
+
+   <div class="ball4">
+     <a href="arcade.htm" class="class2b">Games</a>
+   </div>
+   <a href="film.htm">
+   <div class="ball2">
+    <a href="film.htm" class="class2b";>Film</a>
+   </div>
+   </a>
+   <div class="ball3">
+    <a href="music.htm" class="class2b">Music</a>
+   </div>
+ </div>
+ <!--
+ <div class="inner">
+   <img src="oopp.gif" width="100" height="100">
+ </div>
+ -->
+ <div>
+   <p id="middle01" style="font-family: courier; font size: 6px; color:black;">.</p>
+<a href="info.html">
+  <p id="middle01" style="font-family: courier; font size: 6px; margin-top: 10px;">more info</p>
+</a>
 </div>
-<div class="b" id="bs" onclick="myFunction()">
-  <form action="index.htm" method="post" autofocus>
-      <input type="text" placeholder="" maxlength="7"name="password" style="text-align:center; color: red; outline-color:white;" onkeypress="myFunction(event)">
-      <br>
-  </form>
 </div>
-<script>
-let aa= 0;
- function myFunction(event) {
-
-   var d = document.getElementById("bs");
-   d.className += " otherclass";
-
-   var duh = document.getElementById("as");
-   duh.className += " otherclass";
-
-  var x = event.which || event.keyCode;
-  if (x==48){
-    aa = 1;
-  }
-  else if (x==54){
-    ab = 1;
-  }
-  else if (x==57){
-    ac = 1;
-  }
-  else if (x==50){
-    ad = 1;
-  }
-  if (aa&&ab&&ac&&ad==1){
-    window.location.replace("https://thecrtr.com/menu.htm");
-  }
-}
-</script>
+</div>
+</div>
+</div>
 </body>
 </html>
