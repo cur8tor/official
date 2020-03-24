@@ -1,3 +1,42 @@
+.heart{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  /*background-color: white;*/
+  margin: 20px;
+  /*display: inline-block;*/
+  margin-right: 50%;
+  margin-left: 50%;
+  right: 80px;
+}
+.heart:hover::before,
+.heart:hover::after{
+  box-shadow: 0px 0px 100px 30px #ff0000;   /* h-offset, v-offset, blur, spread, color*/
+}
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 125px;
+  top: 15px;
+  background: red;
+  border-radius: 50px 50px 0px 0px;
+}
+.heart::before{
+  left: 80px;
+  -webkit-ransform-origin: 0% 100%;
+  -webkit-transform:rotate(-45deg);
+  transform-origin: 0% 100%;
+  transform:rotate(-45deg);
+}
+.heart::after{
+  left: 0px;
+  -webkit-transform-origin: 100% 100%;
+  -webkit-transform:rotate(45deg);
+  transform-origin: 100% 100%;
+  transform:rotate(45deg);
+}
 .trans2{
   background-color: black;
   position: fixed;
@@ -167,8 +206,14 @@ A.class2:active {text-decoration: none; color: white; background-color: black;}
 A.class2b {color:red;}
 A.class2b:link  {text-decoration: none; color: white; background-color: white; display:block; border-radius: 0%;padding: 10px,10px; height: 150px; width: 150px; line-height: 150px; font-size: 20px;}
 A.class2b:visited {text-decoration: none; color: white; background-color: white;}
-A.class2b:hover {text-decoration: none; color: black; background-color: none; box-shadow: 0px 0px 40px 20px #fff;}
+A.class2b:hover {text-decoration: none; color: black; background-color: none; box-shadow: 0px 0px 20px 10px #fff;}
 A.class2b:active {text-decoration: none; color: white; background-color: black;}
+
+A.Red {color:red;}
+A.Red:link  {text-decoration: none; color: white; background-color: white;}
+A.Red:visited {text-decoration: none; color: white; background-color: white;}
+A.Red:hover {text-decoration: none; color: black; background-color: none; box-shadow: 0px 0px 20px 10px #ff0000;}
+A.Red:active {text-decoration: none; color: white; background-color: black;}
 
 .outer {
   background-color: white;
