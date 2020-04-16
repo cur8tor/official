@@ -27,6 +27,26 @@ html,body{margin:0;padding:0;}
   top: 50%;
   transform: translate(0%, -50%);
 }
+.specialBabyDiv{
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  float:left;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  margin-left: 50px;
+  border-radius:0px;
+  width: 220px;
+  height: 220px;
+  border-style: solid;
+  border: red;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0px;
+  border: 50px;
+  border-color: red;
+}
 .textCenter{
   position: relative;
   text-align: center;
@@ -49,7 +69,7 @@ html,body{margin:0;padding:0;}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -180px;
+  margin-top: -375px;
 }
 .downArrow{
   position: relative;
@@ -61,4 +81,30 @@ html,body{margin:0;padding:0;}
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 245px;
+}
+.trans2{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 1;
+  animation-name: fade3;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade3;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes fade3 {
+  0%   {background-color:white; opacity:1;}
+  100% {background-color:black; opacity: 0; z-index: -9;}
+}
+-webkit-@keyframes fade3 {
+  0%   {background-color:white; opacity:1;}
+  100% {background-color:black; opacity: 0; z-index: -9;}
 }
