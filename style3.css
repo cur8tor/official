@@ -18,6 +18,15 @@ html,body{margin:0;padding:0;}
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.logoDiv{
+  position: absolute;
+  background-color: black;
+  width: 500px;
+  height: 200px;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .babyDiv{
   background-color: black;
   width: 300px;
