@@ -20,10 +20,10 @@ function getArrowFunction() {
     document.getElementById("link").href = "give.html";
     document.getElementById("imgX").src = "giveH3.png";
   } else if (xtext==1){
-    document.getElementById("link").href = "mag.htm";
+    document.getElementById("link").href = "index.htm";
     document.getElementById("imgX").src = "moduleTop3.png";
   } else if (xtext==2){
-    document.getElementById("link").href = "mag.htm";
+    document.getElementById("link").href = "index.htm";
     document.getElementById("imgX").src = "moduleYT.png";
   } else if (xtext==3){
     document.getElementById("link").href = "photography.htm";
@@ -32,7 +32,7 @@ function getArrowFunction() {
     document.getElementById("link").href = "https://www.instagram.com/curator.vision/";
     document.getElementById("imgX").src = "moduleInsta.png";
   } else if (xtext==5){
-    document.getElementById("link").href = "music.htm";
+    document.getElementById("link").href = "index.htm";
     document.getElementById("imgX").src = "modSpot.png";
   } else if (xtext==6){
     document.getElementById("link").href = "arcade.htm";
