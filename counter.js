@@ -2,7 +2,7 @@ window.onload = getArrowFunction;
 var xtext=0;
 
 function upArrowFunction() {
-  if (xtext>=7) {
+  if (xtext>=8) {
     xtext=0;
   } else {
     xtext+=1;
@@ -10,7 +10,7 @@ function upArrowFunction() {
 }
 function downArrowFunction() {
   if (xtext<=0) {
-    xtext=7;
+    xtext=8;
   } else {
     xtext-=1;
   }
@@ -23,7 +23,7 @@ function getArrowFunction() {
     document.getElementById("link").href = "index.htm";
     document.getElementById("imgX").src = "moduleTop3.png";
   } else if (xtext==2){
-    document.getElementById("link").href = "index.htm";
+    document.getElementById("link").href = "youtube.html";
     document.getElementById("imgX").src = "moduleYT.png";
   } else if (xtext==3){
     document.getElementById("link").href = "photography.htm";
@@ -40,6 +40,9 @@ function getArrowFunction() {
   } else if (xtext==7){
     document.getElementById("link").href = "fash.htm";
     document.getElementById("imgX").src = "moduleShop.png";
+  } else if (xtext==8){
+    document.getElementById("link").href = "go2.html";
+    document.getElementById("imgX").src = "go2.png";
   } else {
     document.getElementById("link").href = "index.htm";
     document.getElementById("imgX").src = "errorH3.png";
