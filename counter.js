@@ -1,5 +1,5 @@
-window.onload = getArrowFunction;
-var xtext=0;
+//window.onload = getArrowFunction;
+//var xtext=0;
 
 function search_animal() {
     let input = document.getElementById('searchbar').value
@@ -16,6 +16,16 @@ function search_animal() {
     }
 }
 
+/*
+function displaySwap() {
+  if (screen.width < 850px){
+    document.getElementById('appHolder').style.width="200px";
+  } else if (screen.width >= 850px {
+    document.getElementById('appHolder').style.width="1200px";
+  }
+}
+*/
+/*
 function upArrowFunction() {
   if (xtext>=8) {
     xtext=0;
@@ -64,3 +74,4 @@ function getArrowFunction() {
     document.getElementById("imgX").src = "errorH3.png";
   }
 }
+*/

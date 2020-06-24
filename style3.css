@@ -2,20 +2,32 @@ html,body{
   margin:0;
   padding:0px;
   font-family: galvji;
+  /*overflow: hidden;*/
   /*min-width: 734px; (this is when apple switches from mac to iphone)*/
 }
-
 #container {
   position: relative;
   width: 100vw;
   height: 100vh;
   background: black;
 }
-
+.appHolder {
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 150;
+  background: black;
+  display: grid;
+  grid-gap: 3%;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  grid-template-rows: repeat(1, 150px);
+}
 .Tleft {
   top: 20;
   left: 0;
-  position: absolute;
+  position: fixed;
   width: 200px;
   height: 100px;
   align-items: center;
@@ -27,7 +39,7 @@ html,body{
 .Tright {
   top: 20;
   right: 0;
-  position: absolute;
+  position: fixed;
   width: 200px;
   height: 100px;
   align-items: center;
@@ -39,7 +51,7 @@ html,body{
 .Bright {
   right: 0;
   bottom: 20;
-  position: absolute;
+  position: fixed;
   width: 200px;
   height: 100px;
   align-items: center;
@@ -51,7 +63,7 @@ html,body{
 .Bleft {
   left: 0;
   bottom: 20;
-  position: absolute;
+  position: fixed;
   width: 200px;
   height: 100px;
   align-items: center;
@@ -60,17 +72,8 @@ html,body{
   font-size: 28px;
   color: white;
 }
-.appHolder {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 1200px;
-  height: 220px;
-  background: black;
-}
 .logoHolder {
-  position: absolute;
+  position: fixed;
   top: 25%;
   left: 50%;
   transform: translate(-50%,-50%);
