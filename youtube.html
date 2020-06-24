@@ -3,77 +3,70 @@
 
 <head>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style3.css"/>
   <title>CURATOR</title>
   <link rel="shortcut icon" type="image/png" href="roundLogo.png">
+  <script src="https://kit.fontawesome.com/3327b56a1f.js" crossorigin="anonymous"></script>
+  <script src="counter.js"></script>
 </head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 
 <a href="index.htm">
-  <img src="mainBlackLogo.png" style="width: 125px; height: 50px; margin-top: 40px; margin-bottom: 10px;" class="center">
+  <img src="mainBlackLogo.png" style="width: 125px; height: 50px; margin-top: 40px; margin-bottom: 20px;" class="center">
 </a>
 
 <body>
+
 <div class="trans"></div>
 
-<p id="middle" style="margin-bottom: 40px;"><b>youtube summer 2020</b></p>
+<p id="middle" style="margin-bottom: 80px;"><b>go2 2020</b></p>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 0px;"><b>Mark Rober</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">new ideas science engineering</p>
-<a target="_blank"tyle="color:white;"href="https://www.youtube.com/user/onemeeeliondollars">
-<p id="middle" style="font-size: 14px;">watch now</p>
+<div class="search-box">
+  <input class="search-txt" id="searchbar" onkeyup="search_animal()" type="text" name="" placeholder="search...">
+  <a id="searchbar" class="search-btn" style="text-decoration:none;"href="#">
+  <i class="fas fa-search"></i>
 </a>
 </div>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 30px;"><b>Mike Boyd</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">learns new things every week</p>
-<a target="_blank"style="color:white;"href="https://www.youtube.com/user/microboyd">
-<p id="middle" style="font-size: 14px;">watch now</p>
-</a>
-</div>
+<ul class="list" style="list-style-type:none;">
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>Mark Rober</b><br>new ideas science engineering<br><a target="blank" style="color: white;"href="https://www.youtube.com/user/onemeeeliondollars">watch now</a></p>
+</div></div></li>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 30px;"><b>MKBHD</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">quality tech videos</p>
-<a target="_blank"style="color:white;"href="https://www.youtube.com/user/marquesbrownlee">
-<p id="middle" style="font-size: 14px;">watch now</p>
-</a>
-</div>
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>Mike Boyd</b><br>learns new things every week<br><a target="blank" style="color: white;"href="https://www.youtube.com/user/microboyd">watch now</a></p>
+</div></div></li>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 30px;"><b>Veritasium</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">an element of truth</p>
-<a target="_blank"style="color:white;"href="https://www.youtube.com/user/1veritasium">
-<p id="middle" style="font-size: 14px;">watch now</p>
-</a>
-</div>
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>MKBHD</b><br>quality tech videos<br><a target="blank" style="color: white;"href="https://www.youtube.com/user/marquesbrownlee">watch now</a></p>
+</div></div></li>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 30px;"><b>Dan Mace</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">makes movies that matter</p>
-<a target="_blank"style="color:white;"href="https://www.youtube.com/user/DanTheDirector1">
-<p id="middle" style="font-size: 14px;">watch now</p>
-</a>
-</div>
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>Veritasium</b><br>an element of truth<br><a target="blank" style="color: white;"href="https://www.youtube.com/user/1veritasium">watch now</a></p>
+</div></div></li>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 30px;"><b>Binging with Babish</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">loves film and cooking</p>
-<a target="_blank"style="color:white;"href="https://www.youtube.com/user/bgfilms">
-<p id="middle" style="font-size: 14px;">watch now</p>
-</a>
-</div>
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>Dan Mace</b><br>makes movies that matter<br><a target="blank" style="color: white;"href="https://www.youtube.com/user/DanTheDirector1">watch now</a></p>
+</div></div></li>
 
-<div style="background:black; height:100px; width:400px; margin:0 auto; border-radius: 10px; color: white; padding-top: 0px;">
-<p id="middle" style="font-size: 18px; margin-top: 30px;"><b>David Dobrik</b></p>
-<p id="middle" style="font-size: 18px; margin-top: 0px;">fun with friends</p>
-<a target="_blank"style="color:white;"href="https://www.youtube.com/channel/UCmh5gdwCx6lN7gEC20leNVA">
-<p id="middle" style="font-size: 14px;">watch now</p>
-</a>
-</div>
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>Binging with Babish</b><br>loves film and cooking<br><a target="blank" style="color: white;"href="https://www.youtube.com/user/bgfilms">watch now</a></p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>David Dobrik</b><br>fun with friends<br><a target="blank" style="color: white;"href="https://www.youtube.com/channel/UCmh5gdwCx6lN7gEC20leNVA">watch now</a></p>
+</div></div>
+</li>
+</ul>
 
 </body>
 </html>

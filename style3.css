@@ -4,16 +4,81 @@ html,body{
   font-family: galvji;
   /*min-width: 734px; (this is when apple switches from mac to iphone)*/
 }
-.daddyDiv{
+
+#container {
   position: relative;
-  background-color: black;
   width: 100vw;
   height: 100vh;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  min-width: 1000px;
-  min-height: 380px;
+  background: black;
 }
+
+.Tleft {
+  top: 20;
+  left: 0;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+.Tright {
+  top: 20;
+  right: 0;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+.Bright {
+  right: 0;
+  bottom: 20;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+.Bleft {
+  left: 0;
+  bottom: 20;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+.appHolder {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 1200px;
+  height: 220px;
+  background: black;
+}
+.logoHolder {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  height: 200px;
+  background: black;
+}
+
 #middleAB{
   text-align:center;
   font-family:courier;
@@ -36,6 +101,16 @@ html,body{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.daddyDiv{
+  position: relative;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-width: 1000px;
+  min-height: 380px;
 }
 .childDiv{
   position: absolute;
