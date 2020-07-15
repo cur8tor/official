@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style3.css"/>
+  <title>CURATOR</title>
+  <link rel="shortcut icon" type="image/png" href="roundLogo.png">
+  <script src="https://kit.fontawesome.com/3327b56a1f.js" crossorigin="anonymous"></script>
+  <script src="counter.js"></script>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<a href="index.html">
+  <img src="mainBlackLogo.png" style="width: 125px; height: 50px; margin-top: 40px; margin-bottom: 20px;" class="center">
+</a>
+
+<body>
+
+<div class="trans"></div>
+
+<p id="middle" style="margin-bottom: 80px;"><b>go2 2020</b></p>
+
+<div class="search-box">
+  <input class="search-txt" id="searchbar" onkeyup="search_animal()" type="text" name="" placeholder="search...">
+  <a id="searchbar" class="search-btn" style="text-decoration:none;"href="#">
+  <i class="fas fa-search"></i>
+</a>
+</div>
+
+<ul class="list" style="list-style-type:none;">
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>phone</b><br>Apple iPhone 11<br>$699.99</p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>laptop</b><br>Apple MacBook Pro<br>$1299.99</p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>wireless earbuds</b><br>Apple Airpods<br>$159.99</p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>wireless headphones</b><br>Sony WH-1000XM3<br>$279.99</p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>mouse</b><br>Logitech MX Series<br>$99.99</p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals"><b>microphone</b><br>Shure SM7B<br>$399.99</p>
+</div></div></li>
+
+<li class="animals">
+<div class="go2Tile">
+<div><p id="middleAB" class="animals" style="margin-top:0px;"><b>wireless earbuds<br>that aren't airpods</b><br>Samsung Galaxy Buds+<br>$149.99</p>
+</div></div>
+</li>
+</ul>
+<!--
+<div class="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QZgIArBFmmE" frameborder="0" allowfullscreen></iframe>
+</div>
+-->
+
+</body>
+</html>
