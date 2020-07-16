@@ -117,6 +117,16 @@ html,body{
   margin-top:10px;
   padding-top: 5px;
 }
+.go2TileSmall{
+  background:black;
+  width: 200px;
+  margin-left: 50%;
+  transform: translate(-57%,0);
+  border-radius: 0px;
+  color: white;
+  margin-top:10px;
+  padding-top: 5px;
+}
 .daddyDiv{
   position: relative;
   background-color: black;
