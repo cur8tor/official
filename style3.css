@@ -75,11 +75,11 @@ html,body{
 }
 .logoHolder {
   position: fixed;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 500px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   background: black;
 }
 
@@ -302,4 +302,23 @@ html,body{
 -webkit-@keyframes fade3 {
   0%   {background-color:white; opacity:1;}
   100% {background-color:black; opacity: 0; z-index: -9;}
+}
+
+#trans44{
+  animation-name: fade44;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade44;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes fade44 {
+  0%   {width:2000px; height:2000px;}
+  100% {opacity: 0%; width:300px; height:300px;}
+}
+-webkit-@keyframes fade44 {
+  0%   {width:2000px; height:2000px;}
+  100% {width:200px; height:200px;}
 }
