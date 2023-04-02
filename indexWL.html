@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Watchlist</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styleWL.css" />
+    <link rel="icon" type="image/png" href="TMIconApp.png">
+</head>
+<body>
+    <div class="sidebar">
+    <h1>Filters</h1>
+    <div class="searchBox">
+        <input type="text" id="search" placeholder="Search...">
+    </div>
+    <label for="tableOption">Table to display:</label>
+    <select id="tableOption">
+        <option value="top500">IMDb Top 500</option>
+        <option value="userRatings">My Ratings</option>
+    </select>
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+        <option value="rating">IMDb Rating</option>
+        <option value="year">Year</option>
+        <option value="userRated">My Ratings</option>
+    </select>
+    <label for="hideBeforeYear">Only Movies After:</label>
+    <input
+        type="number"
+        id="hideBeforeYear"
+        min="1900"
+        max="2100"
+        placeholder="ex. '2000'"
+        value="2000"
+    />
+    <label for="filter">Hide Genre:</label>
+    <input type="text" id="filter" placeholder="ex. 'thriller, animation'" value="thriller, animation"/>
+    <input type="checkbox" id="showWatched">
+    <label for="showWatched">Show Watched</label>
+    <label for="streamingServices">Streaming Services: </label>
+    <div id="streamingServices">
+        <label for="streamingNetflix">
+            <input type="checkbox" id="streamingNetflix" value="Netflix" checked>
+            Netflix
+        </label>
+        <label for="streamingHulu">
+            <input type="checkbox" id="streamingHulu" value="Hulu" checked>
+            Hulu
+        </label>
+        <label for="streamingAmazon">
+            <input type="checkbox" id="streamingAmazon" value="Amazon Prime" checked>
+            Amazon Prime
+        </label>
+        <label for="streamingAppleTV+">
+            <input type="checkbox" id="streamingAppleTV+" value="Apple TV+" checked>
+            AppleTV+
+        </label>
+        <label for="streamingHBOMax">
+            <input type="checkbox" id="streamingHBOMax" value="HBO Max" checked>
+            HBO Max
+        </label>
+        <label for="streamingDisney+">
+            <input type="checkbox" id="streamingDisney+" value="Disney+" checked>
+            Disney+
+        </label>
+        <label for="streamingParamount+">
+            <input type="checkbox" id="streamingParamount+" value="Paramount+">
+            Paramount+
+        </label>
+        <label for="streamingPeacock">
+            <input type="checkbox" id="streamingPeacock" value="Peacock">
+            Peacock
+        </label>
+        <label for="streamingBuy">
+            <input type="checkbox" id="streamingBuy" value="Buy or Rent">
+            Buy or Rent
+        </label>
+    </div>
+    <button id="uploadBtn">Upload Your Ratings</button>
+    <input type="file" id="fileUpload" style="display: none;" />
+    </div>
+    <div class="main">
+    <div><h1 style="margin-left: 1rem; color: #fff;">My Watchlist</h1></div>
+    
+    <div class="table-container">
+    <table id="movieTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Seen</th>
+            <th>Title</th>
+            <th>IMDb Rating</th>
+            <th>Streaming</th>
+            <th>Year</th>
+            <th>Genres</th>
+            <th>Directors</th>
+            <th>User Rating</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </div>
+    </div>
+    <script src="moviesWL.js" type="module"></script>
+</body>
+</html>

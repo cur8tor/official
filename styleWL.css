@@ -1,0 +1,375 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "San Francisco", sans-serif;
+    font-size: 16px;
+    color: #ccc;
+    color: #000;
+    background-color: #141414;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20rem;
+    padding: 2rem;
+    background-color: #1c1c1c;
+    overflow-y: scroll;
+  }
+  
+  .main {
+    margin-left: 20rem;
+    background-color: #1c1c1c;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    color: #fff;
+  }
+  
+  label {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: none;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    vertical-align: middle;
+    color: #ccc;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #ccc;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  select option {
+    font-family: "San Francisco", sans-serif;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  /* --- The rest of your CSS code remains the same --- */
+  
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-spacing: 0;
+    height: 100%;
+    table-layout: fixed;
+  }
+
+  /* Set the height of the table container */
+.table-container {
+    height: calc(100vh - 7rem); /* adjust the height based on your header and search bar height */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Make the table headers sticky */
+  .table-container thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+  }
+  
+  /* Adjust the table body margin to make space for the sticky headers */
+  .table-container tbody {
+    margin-top: 2.5rem; /* adjust the margin based on your header height */
+  }
+  
+
+/* Set the fixed height of the table rows */
+tr {
+    height: 60px; /* Adjust this value to your desired height */
+  }
+  
+  th,
+  td {
+    border: 0px solid #ddd;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    height: 1rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: none;
+    text-align: center;
+    height: 1rem;
+  }
+
+/* Set the width of the Position column */
+th:nth-child(1), td:nth-child(1) {
+    width: 5%;
+    text-align: center;
+}
+
+/* Set the width of the Watched column */
+th:nth-child(2), td:nth-child(2) {
+    width: 5%;
+    text-align: center;
+}
+
+/* Set the width of the IMDb Rating column */
+th:nth-child(4), td:nth-child(4) {
+    width: 5%;
+    text-align: center;
+}
+
+/* Set the width of the Streaming column */
+th:nth-child(5), td:nth-child(5) {
+    width: 7%;
+}
+
+/* Set the width of the Year column */
+th:nth-child(6), td:nth-child(6) {
+    width: 5%;
+    text-align: center;
+}
+
+/* Set the width of the User Rating column */
+th:nth-child(9), td:nth-child(9) {
+    width: 7%;
+    text-align: center;
+}
+
+/* Set the width of the Title column */
+th:nth-child(3), td:nth-child(3) {
+    width: 25%;
+}
+    
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Button styles */
+  button,
+  input[type="submit"] {
+    padding: 0.7rem 1.5rem;
+    background-color: #007aff;
+    color: #fff;
+    border-radius: 0.3rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+  
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+  /* Upload button */
+  #uploadBtn {
+    background-color: #ddd;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  #uploadBtn:hover {
+    background-color: #ccc;
+  }
+  
+  /* File upload */
+  #fileUpload {
+    display: none;
+  }
+  
+  /* Checkbox styles */
+    input[type="checkbox"] {
+    display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    vertical-align: middle;
+  }
+  
+  /* Table option select */
+  #tableOption {
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+  
+  /* Hide before year */
+  #hideBeforeYear {
+    margin-left: 0rem;
+  }
+  
+  /* Display top 5 checkbox */
+  #displayTop5 {
+    margin-left: 2rem;
+  }
+  
+  /* Styles for IMDb rating column */
+  #movieTable td:nth-child(3) {
+    /* color: #007aff; */
+    font-weight: none;
+  }
+  
+  /* Styles for User rating column */
+  #movieTable td:nth-child(4) {
+    /* color: #f39c12; */
+    font-weight: none;
+  }
+  
+  /* Styles for the top position */
+  #movieTable td:first-child {
+    font-weight: none;
+    width: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Streaming services filter */
+#streamingServices {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+#streamingServices label {
+    margin-bottom: .25rem;
+    margin-top: .25rem;
+}
+
+#streamingServices input[type="checkbox"] {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+.searchBox {
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: .5rem;
+    padding: 0rem;
+  }
+  
+#search {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    width: 100%;
+    margin-left: 0.1rem;
+    outline: none;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+#input {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    width: 100%;
+    margin-left: 0.5rem;
+    outline: none;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+
+
+  /* Media queries */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      position: static;
+      height: auto;
+      overflow-y: visible;
+    }
+  
+    .main {
+      margin-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      padding: 1rem;
+    }
+  
+    label {
+      margin-top: 0.5rem;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    select {
+        margin-bottom: 0.25rem;
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        width: 100%;
+        margin-left: 0.5rem;
+        outline: none;
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+    }
+  
+    button,
+    input[type="submit"] {
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  
+    #tableOption {
+      margin-bottom: 0.5rem;
+    }
+  
+    /* Hide before year */
+    #hideBeforeYear {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+  
+    /* Display top 5 checkbox */
+    #displayTop5 {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    #streamingServices {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #streamingServices label {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+  }
