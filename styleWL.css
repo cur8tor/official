@@ -1,51 +1,61 @@
 /* Global styles */
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: "San Francisco", sans-serif;
-    font-size: 16px;
-    color: #ccc;
-    color: #000;
-    background-color: #141414;
-  }
-  
-  .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 20rem;
-    padding: 2rem;
-    background-color: #1c1c1c;
-    overflow-y: scroll;
-  }
-  
-  .main {
-    margin-left: 20rem;
-    background-color: #1c1c1c;
-    padding: 2rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    margin-top: 0rem;
-    margin-left: 0rem;
-    color: #fff;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: "San Francisco", sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ccc;
+  color: #000;
+  background-color: #141414;
+  background-color: #4a3a3a;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20rem;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  background-color: #3a2f2f;
+  display: block;
+  overflow-y: scroll;
+}
+
+.main {
+  margin-left: 20rem;
+  background-color: #1c1c1c;
+  background-color: #503d3d;
+  background-color: #232020;
+  padding: 2rem;
+  position: fixed;
+  /* overscroll-behavior: none; */
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  color: #fff;
+}
+
   
   label {
     display: inline-block;
     font-size: 1rem;
     font-weight: none;
-    margin-top: .5rem;
+    margin-top: .7rem;
     margin-bottom: .5rem;
     vertical-align: middle;
-    color: #ccc;
+    color: white;
   }
   
   input[type="text"],
@@ -53,17 +63,22 @@
   select {
     padding: 0.5rem;
     border-radius: 0.3rem;
-    border: 1px solid #444;
-    background-color: #1c1c1c;
-    color: #ccc;
+    border: 1px solid #787878;
+    /* background-color: #1c1c1c;
+    color: #ccc; */
+    background-color: #4a3a3a;
+    color: white;
     width: 100%;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
+    /* border: none; */
+    /* background-color: transparent; */
+    outline: none;
   }
   
   select option {
     font-family: "San Francisco", sans-serif;
     font-size: 1.2rem;
-    color: #ccc;
+    color: white;
   }
   
   /* --- The rest of your CSS code remains the same --- */
@@ -73,7 +88,7 @@
     border-collapse: collapse;
     width: 100%;
     background-color: #fff;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: #fff;
@@ -85,8 +100,10 @@
 
   /* Set the height of the table container */
 .table-container {
-    height: calc(100vh - 7rem); /* adjust the height based on your header and search bar height */
+    height: calc(100vh - 10rem); /* adjust the height based on your header and search bar height */
     overflow-y: scroll;
+    border-radius: .5rem;
+    /* overflow: visible; */
     -webkit-overflow-scrolling: touch;
   }
   
@@ -94,7 +111,10 @@
   .table-container thead th {
     position: sticky;
     top: 0;
-    background-color: #f2f2f2;
+    background-color: #afebf7;
+    background-color: #3a2f2f;
+    color: #4a3a3a;
+    color: white;
   }
   
   /* Adjust the table body margin to make space for the sticky headers */
@@ -106,6 +126,8 @@
 /* Set the fixed height of the table rows */
 tr {
     height: 60px; /* Adjust this value to your desired height */
+    min-height: 60px;
+    max-height: 60px; /* Set the minimum height */
   }
   
   th,
@@ -122,7 +144,7 @@ tr {
   th {
     background-color: #f2f2f2;
     font-weight: none;
-    text-align: center;
+    text-align: left;
     height: 1rem;
   }
 
@@ -135,35 +157,43 @@ th:nth-child(1), td:nth-child(1) {
 /* Set the width of the Watched column */
 th:nth-child(2), td:nth-child(2) {
     width: 5%;
-    text-align: center;
+    text-align: left;
+}
+
+/* Set the width of the Watched column */
+th:nth-child(3), td:nth-child(3) {
+  /* width: 5%; */
+  text-align: left;
 }
 
 /* Set the width of the IMDb Rating column */
 th:nth-child(4), td:nth-child(4) {
-    width: 5%;
+    width: 8%;
     text-align: center;
 }
 
 /* Set the width of the Streaming column */
 th:nth-child(5), td:nth-child(5) {
-    width: 7%;
+    width: 10%;
+    text-align: center;
 }
 
 /* Set the width of the Year column */
 th:nth-child(6), td:nth-child(6) {
-    width: 5%;
-    text-align: center;
+    width: 7%;
+    text-align: left;
+}
+
+/* Set the width of the User Rating column */
+th:nth-child(8), td:nth-child(8) {
+  width: 10%;
+  text-align: center;
 }
 
 /* Set the width of the User Rating column */
 th:nth-child(9), td:nth-child(9) {
-    width: 7%;
+    width: 10%;
     text-align: center;
-}
-
-/* Set the width of the Title column */
-th:nth-child(3), td:nth-child(3) {
-    width: 25%;
 }
     
   
@@ -175,30 +205,50 @@ th:nth-child(3), td:nth-child(3) {
   button,
   input[type="submit"] {
     padding: 0.7rem 1.5rem;
-    background-color: #007aff;
+    background-color: #afebf7;
     color: #fff;
     border-radius: 0.3rem;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
-    margin-right: 1rem;
   }
   
   button:hover,
   input[type="submit"]:hover {
-    background-color: #0062cc;
+    background-color: #afebf7;
   }
   
   /* Upload button */
   #uploadBtn {
     background-color: #ddd;
+    background-color: #ddd;
     color: #333;
-    font-size: 1.2rem;
+    background-color: #afebf7;
+    color: #4a3a3a;
+    font-size: 1rem;
     font-weight: bold;
-    margin-right: 0.5rem;
+    /* margin-right: 15%;
+    margin-left: 15%; */
+    width: 110px;
+  }
+
+  /* Upload button */
+  #showAllMovies {
+    background-color: #ddd;
+    background-color: #ddd;
+    color: #333;
+    background-color: rgba(240, 240, 240, 0.169);
+    border: #eedada;
+    color: #4a3a3a;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 109px;
+    /* margin-right: 15%;
+    margin-left: 15%; */
   }
   
   #uploadBtn:hover {
@@ -218,6 +268,7 @@ th:nth-child(3), td:nth-child(3) {
     margin-top: .5rem;
     margin-bottom: .5rem;
     vertical-align: middle;
+    background-color: #afebf7;
   }
   
   /* Table option select */
@@ -251,9 +302,10 @@ th:nth-child(3), td:nth-child(3) {
   /* Styles for the top position */
   #movieTable td:first-child {
     font-weight: none;
-    width: 5rem;
+    width: 5%;
     padding-left: 1rem;
     padding-right: 1rem;
+    text-align: center;
   }
 
   /* Streaming services filter */
@@ -273,24 +325,29 @@ th:nth-child(3), td:nth-child(3) {
     margin-top: .25rem;
     margin-bottom: .25rem;
 }
-.searchBox {
+.searchBox,
+.searchBox2 {
     display: flex;
     margin-bottom: 1rem;
     background-color: #fff;
-    border-radius: 5px;
+    background-color: #3a2f2f;
+    /* background-color: black; */
+    color: white;
+    border-radius: 7px;
     margin-top: .5rem;
     padding: 0rem;
   }
   
-#search {
-    border: none;
+#search,
+#search2 {
+    /* border: none; */
     background-color: transparent;
+    border-color: #555555;
     font-size: 1rem;
     width: 100%;
-    margin-left: 0.1rem;
     outline: none;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+    /* margin-top: .25rem;
+    margin-bottom: .25rem; */
 }
 #input {
     border: none;
@@ -303,73 +360,242 @@ th:nth-child(3), td:nth-child(3) {
     margin-bottom: .25rem;
 }
 
+/* Add this CSS for styling the mobile filters tab */
+.mobile-filters-tab {
+  display: none;
+}
 
-  /* Media queries */
-  @media screen and (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-      position: static;
-      height: auto;
-      overflow-y: visible;
-    }
-  
-    .main {
-      margin-left: 0;
-    }
+/* Media queries */
+@media screen and (max-width: 1001px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    overflow-y: visible;
+    display: block;
+    padding-top: 2rem;
+  }
+
+  .mobile-filters-tab {
+    display: block;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    padding-top: 2rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-filters-tab button {
+    background-color: #007BFF;
+    background-color: #816464;
+    background-color: #81CBCB;
+    background-color: white;
+    background-color: #8eefef;
+    background-color: #afebf7;
+    border: none;
+    color: black;
+    /* color: #816464;*/
+    color: #4a3a3a;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .main {
+    margin-left: 0;
+    max-height: 100vh; /* Set the max-height */
   }
   
-  @media screen and (max-width: 600px) {
-    .sidebar {
-      padding: 1rem;
-    }
-  
-    label {
-      margin-top: 0.5rem;
-    }
-  
-    input[type="text"],
-    input[type="number"],
-    select {
-        margin-bottom: 0.25rem;
-        border: none;
-        background-color: transparent;
-        font-size: 1rem;
-        width: 100%;
-        margin-left: 0.5rem;
-        outline: none;
-        margin-top: .25rem;
-        margin-bottom: .25rem;
-    }
-  
-    button,
-    input[type="submit"] {
-      margin-top: 0.5rem;
-      margin-right: 0.5rem;
-    }
-  
-    #tableOption {
-      margin-bottom: 0.5rem;
-    }
-  
-    /* Hide before year */
-    #hideBeforeYear {
-      margin-left: 0;
-      margin-bottom: 0.5rem;
-    }
-  
-    /* Display top 5 checkbox */
-    #displayTop5 {
-      margin-left: 0;
-      margin-bottom: 0.5rem;
-    }
-
-    #streamingServices {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    #streamingServices label {
-        margin-right: 1rem;
-        margin-bottom: 0;
-    }
+  .table-container {
+    overflow-x: none;
+    /* height: 100%; Set the height to 100% */
+    /* max-height: 100vh; Set the max-height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .table-responsive {
+    min-width: 100%;
+  }
+
+  .table tr {
+    height: 40px;
+  }
+
+  tr {
+    height: 40px;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide the unnecessary columns on mobile */
+  .table-container th:nth-child(1),
+  .table-container td:nth-child(1),
+  .table-container th:nth-child(6),
+  .table-container td:nth-child(6),
+  .table-container th:nth-child(7),
+  .table-container td:nth-child(7),
+  .table-container th:nth-child(8),
+  .table-container td:nth-child(8){
+    display: none;
+  }
+
+  .table-container th:nth-child(2){
+    width: 5%;
+  }
+  .table-container th:nth-child(3){
+    width: 15%;
+    text-align: center;
+  }
+  .table-container th:nth-child(4){
+    width: 5%;
+  }
+  .table-container th:nth-child(5){
+    width: 10%;
+  }
+  .table-container th:nth-child(9){
+    width: 6%;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    height: 100vh;
+    padding: 2rem;
+    padding-top: 2rem;
+    position: fixed;
+    /* display: none; */
+  }
+
+  #uploadBtn {
+    width: 170px;
+    margin-top: 0.35rem;
+    margin-right: 0rem;
+  }
+
+  #showAllMovies {
+    margin-top: 0.35rem;
+    margin-right: 0rem;
+  }
+
+  .main {
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+    padding-bottom: 0;
+    /* padding-top: 1rem; */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin-top: 0;
+    padding-top: 1rem;
+    /* background-color: #333; */
+    color: #81CBCB;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .mainTitle {
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+
+  .searchBox2,
+  #search2 {
+    margin-top: 0rem;
+    border-radius: 0rem;
+    border: transparent;
+    padding: 0rem;
+    border-color: #3f3f3f;
+    border-radius: .5rem .5rem 0rem 0rem;
+    padding: 0rem;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    margin-bottom: .25rem;
+  }
+
+  #search2 {
+    margin-top: 0rem;
+    border-radius: 0rem;
+    border: transparent;
+    padding: 1rem;
+    border-color: #3f3f3f;
+    border-radius: .5rem .5rem 0rem 0rem;
+    margin-bottom: .2rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    overflow-y: scroll;
+    /* margin-top: 2rem; */
+    margin-bottom: 0rem;
+    border-radius: 0rem;
+    max-height: calc(100vh - 10rem); /* Set the max-height to fill the remaining space */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  }
+
+  table {
+    border-radius: 0rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    font-size: 0.9rem;
+  }
+
+  button,
+  input[type="submit"] {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #streamingServices {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #streamingServices label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  th,
+  td {
+    font-size: 0.9rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  tr {
+    height: 50px;
+  }
+
+  th {
+    height: 1rem;
+  }
+}
