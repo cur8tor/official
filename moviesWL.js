@@ -11,6 +11,8 @@ async function displayMovies(movies) {
             let streamingText = '';
             let watched = userMovies.has(movie.Const) ? 'checked' : '';
             let watchedCheckbox = `<input type="checkbox" class="watched-checkbox" data-const="${movie.Const}" ${watched}>`;
+            const formatRuntime = (runtime) => `${Math.floor(runtime / 60)}h ${runtime % 60}m`;
+            let runtimeHM = formatRuntime(movie['Runtime (mins)']);
             if (movie.Link && movie.Link !== 'link not found') {
                 streamingText = `<a href="${movie.Link}" target="_blank">${movie.Streaming}</a>`;
             } else if (movie.Streaming) {
@@ -19,7 +21,9 @@ async function displayMovies(movies) {
             // let position = movie.Position ? movie.Position : '-';
             // let imdbRating = movie['IMDb Rating'] ? movie['IMDb Rating'] : '-';
             // let row = `<tr><td>${position}</td><td>${watchedCheckbox}</td><td>${movie.Title}</td><td>${imdbRating}</td><td>${streamingText}</td><td>${movie.Year}</td><td>${movie.Genres}</td><td>${movie.Directors}</td><td>${userRating}</td></tr>`;
-            let row = `<tr><td>${movie.Position}</td><td>${watchedCheckbox}</td><td>${movie.Title}</td><td>${movie['IMDb Rating']}</td><td>${streamingText}</td><td>${movie.Year}</td><td>${movie.Genres}</td><td>${movie.Directors}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
+            //let row = `<tr><td>${movie.Position}</td><td>${watchedCheckbox}</td><td>${movie.Title}</td><td>${movie['IMDb Rating']}</td><td>${streamingText}</td><td>${movie.Year}</td><td>${movie.Genres}</td><td>${movie.Directors}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
+            let row = `<tr><td>${movie['IMDb Rating']}</td><td>${movie.Title}</td><td>${movie.Year}</td><td>${streamingText}</td><td>${movie.Genres}</td><td>${runtimeHM}</td><td>${watchedCheckbox}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
+
             movieTable.append(row);
         }
     }

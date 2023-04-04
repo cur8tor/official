@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curator Watchlist</title>
+    <title>Custom Watchlist</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link rel="stylesheet" href="styleWL.css" />
-    <link rel="icon" type="image/png" href="roundLogoMixed.png">
+    <link rel="icon" type="image/png" href="TMIconApp.png">
 </head>
 <body>
     <div class="mobile-filters-tab">
@@ -22,7 +22,6 @@
     <select id="tableOption">
         <option value="top500">IMDb Top 500</option>
         <option value="userRatings">My Ratings</option>
-        <!-- <option value="allMovies">All Movies</option> -->
     </select>
     <label for="sort">Sort by:</label>
     <select id="sort">
@@ -81,10 +80,6 @@
             <input type="checkbox" id="streamingBuy" value="Buy or Rent">
             Buy or Rent
         </label>
-        <!-- <label for="streamingNotFound">
-            <input type="checkbox" id="streaming" value="Not found">
-            Not found
-        </label> -->
     </div>
     <div class="button-container">
         <button id="showAllMovies" class="btn btn-secondary mt-3">Show All Movies</button>
@@ -101,15 +96,14 @@
     <table id="movieTable">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>Seen</th>
+            <th>/10</th>
             <th>Title</th>
-            <th>IMDb</th>
-            <th>Streaming</th>
             <th>Year</th>
+            <th>Streaming</th>
             <th>Genres</th>
-            <th>Directors</th>
-            <th>Score</th>
+            <th>Length</th>
+            <th>Seen</th>
+            <th>/10</th>
         </tr>
         </thead>
         <tbody></tbody>
