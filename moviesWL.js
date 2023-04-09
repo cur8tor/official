@@ -19,7 +19,8 @@ async function displayMovies(movies) {
             } else if (movie.Streaming) {
                 streamingText = movie.Streaming === 'n/a' ? 'Buy' : movie.Streaming;
             }
-            let row = `<tr><td>${movie['IMDb Rating']}</td><td>${movie.Title}</td><td>${movie.Year}</td><td>${streamingText}</td><td>${movie.Genres}</td><td>${runtimeHM}</td><td>${watchedCheckbox}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
+            //let row = `<tr><td>${movie['IMDb Rating']}</td><td>${movie.Title}</td><td>${movie.Year}</td><td>${streamingText}</td><td>${movie.Genres}</td><td>${runtimeHM}</td><td>${watchedCheckbox}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
+            let row = `<tr><td>${movie['IMDb Rating']}</td><td>${movie.Title}</td><td>${movie.Year}</td><td>${streamingText}</td><td>${movie.Genres}</td><td>${runtimeHM}</td><td>${watchedCheckbox}</td></tr>`;
             movieTable.append(row);
         }
     }
@@ -49,8 +50,8 @@ function loadCSV(url, callback) {
 async function filterAndSortMovies(moviesSource = top500Movies) {
     let filter = $('#filter').val().toLowerCase();
     let sort = $('#sort').val();
-    let search = $('#search').val().toLowerCase();
-    let search2 = $('#search2').val().toLowerCase();
+    // let search = $('#search').val().toLowerCase();
+    // let search2 = $('#search2').val().toLowerCase();
     let showWatched = $('#showWatched').prop('checked');
     let hideBeforeYear = parseInt($('#hideBeforeYear').val()) || 0;
     let tableOption = $('#tableOption').val();
@@ -96,12 +97,12 @@ async function filterAndSortMovies(moviesSource = top500Movies) {
               continue;
             }
         }
-        if (search !== '' && !movie.Title.toLowerCase().includes(search)) {
-            continue;
-        }
-        if (search2 !== '' && !movie.Title.toLowerCase().includes(search2)) {
-            continue;
-        }
+        // if (search !== '' && !movie.Title.toLowerCase().includes(search)) {
+        //     continue;
+        // }
+        // if (search2 !== '' && !movie.Title.toLowerCase().includes(search2)) {
+        //     continue;
+        // }
         
         let userRating = getUserRating(movie.Const);
         filteredMovies.push({...movie, userRating, streaming});
@@ -121,8 +122,6 @@ async function filterAndSortMovies(moviesSource = top500Movies) {
     }
     await displayMovies(filteredMovies);
 }
-
-
 
 function userRatingsUpload() {
     let file = document.getElementById('userRatingsFile').files[0];
@@ -190,19 +189,42 @@ function loadUserMovies() {
 function toggleFiltersSidebar() {
     const sidebar = document.querySelector(".sidebar");
     const mainContent = document.querySelector(".main");
-    const FilterButtonR = document.querySelector("#FiltersBtn");
-    const SearchBoxR = document.querySelector(".searchBox");
-    if (sidebar.style.display === "block") {
+    const filterButton = document.querySelector("#FiltersBtn");
+  
+    // check if the screen is small
+    if (window.matchMedia("(max-width: 1001px)").matches) {
+      if (sidebar.style.display === "block") {
         sidebar.style.display = "none";
-        FilterButtonR.textContent = "Filters"
-        mainContent.style.display = "block"; 
-    } else {
+        filterButton.textContent = "Filters";
+        mainContent.style.display = "block";
+        mainContent.style.marginLeft = "0rem";
+        console.log("show main");
+      } else {
         sidebar.style.display = "block";
-        FilterButtonR.textContent = "Save"
-        SearchBoxR.style.display = "none"
+        filterButton.textContent = "Save";
+        mainContent.style.marginLeft = "20rem";
         mainContent.style.display = "none";
+        console.log("hide main");
+      }
+    } else { // screen is large
+      if (sidebar.style.display === "block") {
+        // hide sidebar 
+        sidebar.style.display = "none";
+        mainContent.style.marginLeft = "0rem";
+        filterButton.textContent = "Show Filters";
+        //sidebar.style.float = "left";
+        //mainContent.style.width = "calc(100% - " + sidebar.offsetWidth + "px)";
+      } else {
+        // show sidebar 
+        sidebar.style.display = "block";
+        mainContent.style.marginLeft = "20rem";
+        filterButton.textContent = "Hide Filters";
+        //sidebar.style.float = "none";
+        //mainContent.style.width = "100%";
+      }
     }
-}  
+}
+  
 
 function saveFilters() {
     const filterState = {
@@ -299,7 +321,6 @@ $(document).ready(function () {
             filterAndSortMovies();
         }
     });
-     
     $('#showAllMovies').on('click', function () {
         $('#streamingServices input:checked').prop('checked', false);
         $('#filter').val('');

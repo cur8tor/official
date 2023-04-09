@@ -6,13 +6,17 @@
 body {
   margin: 0;
   /* font-family: "San Francisco", sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif; */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background-color: rgb(9, 10, 12);
   font-size: 16px;
   color: #ccc;
   color: #000;
   background-color: #141414;
   background-color: #232020;
+  background-color: rgb(9, 10, 12);
+  min-width: 350px;
 }
 
 .sidebar {
@@ -24,17 +28,21 @@ body {
   padding: 2rem;
   background-color: #1c1c1c;
   background-color: #3a2f2f;
+  background-color: rgb(20, 23, 28);
   display: block;
-  overflow-y: scroll;
+  overflow: hidden;
+  /* overflow-y: scroll; */
 }
 
 .main {
-  margin-left: 20rem;
+  /* margin-left: 20rem; */
   background-color: #1c1c1c;
   background-color: #503d3d;
   background-color: #232020;
-  padding: 2rem;
-  position: fixed;
+  background-color: rgb(20, 23, 28);
+  background-color: rgb(9, 10, 12);
+  /* padding: 2rem; */
+  /* position: fixed; */
   /* overscroll-behavior: none; */
 }
 
@@ -42,12 +50,20 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  margin-top: 0rem;
-  margin-left: 0rem;
+  margin-top: 1rem;
+  /* margin-left: 3rem; */
   color: #fff;
 }
 
-  
+.mainTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
   label {
     display: inline-block;
     font-size: 1rem;
@@ -63,10 +79,12 @@ h1 {
   select {
     padding: 0.5rem;
     border-radius: 0.3rem;
-    border: 1px solid #787878;
+    border: 1px solid #444444;
     /* background-color: #1c1c1c;
     color: #ccc; */
     background-color: #4a3a3a;
+    background-color: black;
+    background-color: rgb(9, 10, 12);
     color: white;
     width: 100%;
     /* margin-bottom: 0.5rem; */
@@ -90,8 +108,12 @@ h1 {
     background-color: #fff;
     /* margin-bottom: 2rem; */
     border-radius: 0.5rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #fff;
+    background-color: rgb(20, 23, 28);
+    color: white;
+    color: red;
+    color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     border-spacing: 0;
     height: 100%;
@@ -100,11 +122,9 @@ h1 {
 
   /* Set the height of the table container */
 .table-container {
-    height: calc(100vh - 10rem); /* adjust the height based on your header and search bar height */
-    overflow-y: scroll;
-    border-radius: .5rem;
-    /* overflow: visible; */
-    -webkit-overflow-scrolling: touch;
+    border-radius: 1rem;
+    padding: 2rem;
+    padding-top: 0rem;
   }
   
   /* Make the table headers sticky */
@@ -113,6 +133,8 @@ h1 {
     top: 0;
     background-color: #afebf7;
     background-color: #3a2f2f;
+    background-color: black;
+    background-color: rgb(9, 10, 12);
     color: #4a3a3a;
     color: white;
     height: 60px;
@@ -129,25 +151,25 @@ tr {
     height: 60px; /* Adjust this value to your desired height */
     min-height: 60px;
     max-height: 60px; /* Set the minimum height */
-  }
+}
   
-  th,
-  td {
-    border: 0px solid #ddd;
-    padding-right: .5rem;
-    padding-left: .5rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    height: 1rem;
-    text-align: left;
-  }
+th,
+td {
+  border: 0px solid #ddd;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  height: 1rem;
+  text-align: left;
+}
   
-  th {
-    background-color: #f2f2f2;
-    font-weight: none;
-    text-align: left;
-    height: 1rem;
-  }
+th {
+  background-color: #f2f2f2;
+  font-weight: none;
+  text-align: left;
+  height: 1rem;
+}
 
 /* Set the width of the Position column */
 #movieTable th:nth-child(1), td:nth-child(1) {
@@ -161,6 +183,7 @@ tr {
     width: 6%;
     text-align: left;
     font-weight: bold;
+    color: white;
 }
 
 /* Set the width of the Watched column */
@@ -177,7 +200,7 @@ tr {
 
 /* Set the width of the Streaming column */
 #movieTable th:nth-child(5), td:nth-child(5) {
-    width: 8%;
+    width: 6%;
     text-align: left;
 }
 
@@ -195,7 +218,7 @@ tr {
 
 /* Set the width of the Year column */
 #movieTable th:nth-child(8), td:nth-child(8) {
-  width: 2%;
+  width: 4%;
   text-align: left;
   vertical-align: center;
 }
@@ -206,8 +229,15 @@ tr {
   vertical-align: center;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #f9f9f9;
+  background-color: rgb(20, 23, 28);
+  color: rgba(255, 255, 255, 0.75);
+} */
+
+#movieTable tr:last-child {
+  /* background-color: blue; */
+  border-radius: 10px;
 }
   
 /* Button styles */
@@ -222,7 +252,6 @@ input[type="submit"] {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 1rem;
 }
 
 button:hover,
@@ -237,6 +266,9 @@ input[type="submit"]:hover {
   color: #333;
   background-color: #afebf7;
   color: #4a3a3a;
+  color: black;
+  color: rgb(9, 10, 12);
+  background-color: white;
   font-size: 1rem;
   font-weight: bold;
   /* margin-right: 15%;
@@ -250,6 +282,8 @@ input[type="submit"]:hover {
   background-color: #ddd;
   color: #333;
   background-color: rgba(240, 240, 240, 0.169);
+  background-color: black;
+  background-color: rgb(9, 10, 12);
   border: #eedada;
   color: #4a3a3a;
   color: white;
@@ -331,6 +365,8 @@ input[type="submit"]:hover {
     margin-bottom: 1rem;
     background-color: #fff;
     background-color: #3a2f2f;
+    background-color: black;
+    background-color: rgb(9, 10, 12);
     /* background-color: black; */
     color: white;
     border-radius: 7px;
@@ -346,6 +382,9 @@ input[type="submit"]:hover {
     font-size: 1rem;
     width: 100%;
     outline: none;
+    /* background-color: rgba(255, 250, 39, 0.75); */
+    border-radius: 50px;
+    padding-left: 1rem;
     /* margin-top: .25rem;
     margin-bottom: .25rem; */
 }
@@ -361,30 +400,43 @@ input[type="submit"]:hover {
     margin-bottom: .25rem;
 }
 
-/* Add this CSS for styling the mobile filters tab */
-.mobile-filters-tab {
-  display: none;
-}
-
 /* Media queries */
-@media screen and (max-width: 1001px) {
+@media screen and (max-width: 2001px) {
   .sidebar {
-    width: 100%;
-    position: static;
-    height: auto;
-    /* overflow-y: visible; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20rem;
+    padding: 2rem;
+    background-color: #1c1c1c;
+    background-color: #3a2f2f;
+    background-color: rgb(20, 23, 28);
     display: block;
+    display: none;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+  }
+
+  .main {
+    /* margin-left: 20rem; */
+    background-color: #1c1c1c;
+    background-color: #503d3d;
+    background-color: #232020;
+    background-color: rgb(20, 23, 28);
+    background-color: rgb(9, 10, 12);
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    /* position: fixed; */
+    /* overscroll-behavior: none; */
   }
 
   .mobile-filters-tab {
     display: block;
-    position: fixed;
+    position: absolute;
     right: 0;
     z-index: 100;
-    padding-top: 2rem;
-    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-right: 3rem;
   }
 
   .mobile-filters-tab button {
@@ -395,9 +447,11 @@ input[type="submit"]:hover {
     background-color: #8eefef;
     background-color: #afebf7;
     border: none;
-    color: black;
     /* color: #816464;*/
     color: #4a3a3a;
+    color:black;
+    color: rgb(9, 10, 12);
+    background-color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -407,16 +461,269 @@ input[type="submit"]:hover {
 
   .main {
     margin-left: 0;
-    max-height: 100vh;
+    /* max-height: 100vh; */
   }
   
   .table-container {
-    overflow-x: none;
+    /* overflow-x: none; */
     /* height: 100%; Set the height to 100% */
     /* max-height: 100vh; Set the max-height */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 5px;
+    border-color: rgb(32 36 45);
+    border: 1px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .table-responsive {
+    min-width: 100%;
+  }
+
+  .table tr {
+    height: 40px;
+  }
+
+  tr {
+    height: 40px;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+  }
+/* 
+  .table-container th:nth-child(5),
+  .table-container td:nth-child(5),
+  .table-container th:nth-child(6),
+  .table-container td:nth-child(6) {
+    display: none;
+  }
+
+  .table-container th:nth-child(1){
+    width: 5%;
+    text-align: left;
+    padding-right: rem;
+  } */
+  #movieTable th:nth-child(2), td:nth-child(2){
+    /* width: 15%; */
+    text-align: left;
+  }
+  .table-container th:nth-child(3){
+    width: 5%;
+    text-align: left;
+  }
+  .table-container th:nth-child(4){
+    width: 8%;
+  }
+  .table-container th:nth-child(5){
+    width: 6%;
+    text-align: center;
+  }
+  .table-container th:nth-child(6){
+    width: 6%;
+    text-align: center;
+  }
+  .table-container th:nth-child(7){
+    width: 6%;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 2000px) {
+  .sidebar {
+    height: 100vh;
+    padding: 2rem;
+    position: fixed;
+    display: none;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  #uploadBtn {
+    width: 170px;
+    margin-top: 0.35rem;
+    margin-right: 0rem;
+  }
+
+  #showAllMovies {
+    margin-top: 0.35rem;
+    margin-right: 0rem;
+  }
+
+  .main {
+    /* padding-left: 0; */
+    /* padding-right: 0; */
+    /* padding-bottom: 0; */
+    /* padding-top: 1rem; */
+    /* height: 100vh; */
+    /* display: flex; */
+    flex-direction: column;
+    /* margin-left: 0rem; */
+    display: block !important;;
+  }
+
+  h1 {
+    margin-top: 0;
+    /* padding-top: 1rem; */
+    /* background-color: #333; */
+    color: #81CBCB;
+    color: white;
+    /* position: sticky; */
+    top: 0;
+    z-index: 10;
+  }
+
+  .searchBox2,
+  #search2 {
+    margin-top: 0rem;
+    border-radius: 0rem;
+    border: transparent;
+    padding: 0rem;
+    border-color: #3f3f3f;
+    border-radius: .5rem .5rem 0rem 0rem;
+    padding: 0rem;
+    /* position: fixed;
+    bottom:0; */
+    width: 100%;
+    margin-bottom: .25rem;
+  }
+
+  #search2 {
+    margin-top: 0rem;
+    border-radius: 0rem;
+    border: transparent;
+    padding: 1rem;
+    border-color: #3f3f3f;
+    border-radius: .5rem .5rem 0rem 0rem;
+    margin-bottom: .2rem;
+  }
+
+  .table-container {
+    /* overflow-x: auto; */
+    /* overflow-y: scroll; */
+    /* margin-top: 2rem; */
+    margin-bottom: 0rem;
+    border-radius: 10px;
+    /* max-height: calc(100vh - 10rem); /* Set the max-height to fill the remaining space */
+  }
+
+  table {
+    border-radius: 0rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    font-size: 0.9rem;
+  }
+
+  button,
+  input[type="submit"] {
+    font-size: 1rem;
+    /* padding: 0.5rem 1rem; */
+  }
+
+  #streamingServices {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #streamingServices label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  th,
+  td {
+    font-size: 0.9rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    height: 60px;
+    max-height: 20px;
+  }
+
+  tr {
+    height: 20px;
+  }
+
+  th {
+    height: 1rem;
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 1001px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    /* overflow-y: visible; */
+    display: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* background-color: red; */
+    /* display: block; */
+  }
+
+  .mobile-filters-tab {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    /* padding-top: 2rem; */
+    padding-right: 2rem;
+  }
+
+  .mobile-filters-tab button {
+    background-color: #007BFF;
+    background-color: #816464;
+    background-color: #81CBCB;
+    background-color: white;
+    background-color: #8eefef;
+    background-color: #afebf7;
+    border: none;
+    /* color: #816464;*/
+    color: #4a3a3a;
+    color:black;
+    color: rgb(9, 10, 12);
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .main {
+    margin-left: 0rem;
+    /* background-color: blue; */
+    /* max-height: 100vh; */
+    /* padding: 2rem; */
+  }
+  
+  .table-container {
+    /* overflow-x: none; */
+    /* height: 100%; Set the height to 100% */
+    /* max-height: 100vh; Set the max-height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: rgb(32 36 45/var(--tw-border-opacity));
+    border: 1px;
   }
 
   .button-container {
@@ -459,14 +766,14 @@ input[type="submit"]:hover {
   }
   #movieTable th:nth-child(2), td:nth-child(2){
     /* width: 15%; */
-    text-align: right;
+    text-align: left;
   }
   .table-container th:nth-child(3){
     width: 5%;
     text-align: left;
   }
   .table-container th:nth-child(4){
-    width: 10%;
+    width: 8%;
   }
   .table-container th:nth-child(5){
     width: 6%;
@@ -488,9 +795,9 @@ input[type="submit"]:hover {
     height: 100vh;
     padding: 2rem;
     padding-top: 2rem;
-    position: fixed;
+    /* position: fixed; */
     padding-bottom: 8rem;
-    /* display: none; */
+    display: none;
   }
 
   #uploadBtn {
@@ -505,29 +812,25 @@ input[type="submit"]:hover {
   }
 
   .main {
-    padding-left: 0; /* Remove left padding */
-    padding-right: 0; /* Remove right padding */
-    padding-bottom: 0;
+    /* padding-left: 0;
+    padding-right: 0; 
+    padding-bottom: 0; */
     /* padding-top: 1rem; */
-    height: 100vh; /* Set height to 100% of the viewport height */
-    display: flex;
+    /* height: 100vh; */
+    /* display: flex; */
+    margin-left: 0rem;
     flex-direction: column;
   }
 
   h1 {
     margin-top: 0;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     /* background-color: #333; */
     color: #81CBCB;
     color: white;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 10;
-  }
-
-  .mainTitle {
-    padding-left: 2rem;
-    padding-top: 1rem;
   }
 
   .searchBox2,
@@ -556,13 +859,15 @@ input[type="submit"]:hover {
   }
 
   .table-container {
-    overflow-x: auto;
-    overflow-y: scroll;
+    /* overflow-x: auto; */
+    /* overflow-y: scroll; */
     /* margin-top: 2rem; */
     margin-bottom: 0rem;
     border-radius: 0rem;
-    max-height: calc(100vh - 10rem); /* Set the max-height to fill the remaining space */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    padding: 2rem;
+    padding-top: 0rem;
+    /* max-height: calc(100vh - 10rem);  */
+    /* -webkit-overflow-scrolling: touch;  */
   }
 
   table {
@@ -578,7 +883,7 @@ input[type="submit"]:hover {
   button,
   input[type="submit"] {
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
   }
 
   #streamingServices {
@@ -608,5 +913,11 @@ input[type="submit"]:hover {
 
   th {
     height: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .table-container {
+    padding: 0rem;
   }
 }
