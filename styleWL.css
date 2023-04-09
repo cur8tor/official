@@ -919,5 +919,6 @@ input[type="submit"]:hover {
 @media screen and (max-width: 500px) {
   .table-container {
     padding: 0rem;
+    padding-bottom: 6rem;
   }
 }
