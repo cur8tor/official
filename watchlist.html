@@ -20,9 +20,15 @@
     </div>
     <label for="tableOption">Table to display:</label>
     <select id="tableOption">
-        <option value="top500">IMDb Top 500</option>
+        <option value="top500">Top Movies</option>
+        <option value="topTV">Top TV</option>
         <option value="userRatings">My Ratings</option>
+        <!-- <option value="watchlist">My watchlist</option> -->
     </select>
+    <!-- <div class="filter-row">
+        <label for="showWatchlist">Show watchlist:</label>
+        <input type="checkbox" id="showWatchlist">
+    </div> -->
     <label for="sort">Sort by:</label>
     <select id="sort">
         <option value="rating">IMDb</option>
@@ -104,6 +110,7 @@
             <th>Length</th>
             <th>Seen</th>
             <th>/10</th>
+            <!-- <th>Watchlist</th> -->
         </tr>
         </thead>
         <tbody></tbody>

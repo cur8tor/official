@@ -1,6 +1,7 @@
 const movieTable = $('#movieTable tbody');
 let top500Movies = [];
 let userMovies = new Set();
+let userTVShows = new Set();
 let userRatedMovies = [];
 
 async function displayMovies(movies) {
@@ -9,7 +10,7 @@ async function displayMovies(movies) {
         if (movie.Const) {
             let userRating = getUserRating(movie.Const);
             let streamingText = '';
-            let watched = userMovies.has(movie.Const) ? 'checked' : '';
+            let watched = (userMovies.has(movie.Const) || userTVShows.has(movie.Const)) ? 'checked' : '';
             let watchedCheckbox = `<input type="checkbox" class="watched-checkbox" data-const="${movie.Const}" ${watched}>`;
             const formatRuntime = (runtime) => `${Math.floor(runtime / 60)}h ${runtime % 60}m`;
             let runtimeHM = formatRuntime(movie['Runtime (mins)']);
@@ -18,22 +19,17 @@ async function displayMovies(movies) {
             } else if (movie.Streaming) {
                 streamingText = movie.Streaming === 'n/a' ? 'Buy' : movie.Streaming;
             }
-            // let position = movie.Position ? movie.Position : '-';
-            // let imdbRating = movie['IMDb Rating'] ? movie['IMDb Rating'] : '-';
-            // let row = `<tr><td>${position}</td><td>${watchedCheckbox}</td><td>${movie.Title}</td><td>${imdbRating}</td><td>${streamingText}</td><td>${movie.Year}</td><td>${movie.Genres}</td><td>${movie.Directors}</td><td>${userRating}</td></tr>`;
-            //let row = `<tr><td>${movie.Position}</td><td>${watchedCheckbox}</td><td>${movie.Title}</td><td>${movie['IMDb Rating']}</td><td>${streamingText}</td><td>${movie.Year}</td><td>${movie.Genres}</td><td>${movie.Directors}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
             let row = `<tr><td>${movie['IMDb Rating']}</td><td>${movie.Title}</td><td>${movie.Year}</td><td>${streamingText}</td><td>${movie.Genres}</td><td>${runtimeHM}</td><td>${watchedCheckbox}</td><td contenteditable="true" class="user-rating" data-const="${movie.Const}">${userRating}</td></tr>`;
-
             movieTable.append(row);
         }
     }
 }
 
-function getUserRating(movieConst) {
+function getUserRating(movieConst, source) {
     let movie = userRatedMovies.find(userMovie => userMovie.Const === movieConst);
     if (movie) {
         return movie['Your Rating'];
-    } else if (userMovies.has(movieConst)) {
+    } else if ((source === 'top500' && userMovies.has(movieConst)) || (source === 'topTV' && userTVShows.has(movieConst))) {
         return '';
     } else {
         return '';
@@ -50,7 +46,7 @@ function loadCSV(url, callback) {
     });
 }
 
-async function filterAndSortMovies() {
+async function filterAndSortMovies(moviesSource = top500Movies) {
     let filter = $('#filter').val().toLowerCase();
     let sort = $('#sort').val();
     let search = $('#search').val().toLowerCase();
@@ -64,11 +60,8 @@ async function filterAndSortMovies() {
         genresToExclude = filter.split(',').map(genre => genre.trim().toLowerCase());
     }
 
-    let sourceMovies = top500Movies;
-    if ($('#tableOption').val() === 'allMovies') {
-        await displayMovies(sourceMovies);
-        return;
-    }
+    let sourceMovies = tableOption === 'topTV' ? topTVShows : moviesSource; // Change this line to use your top TV shows variable
+
     let filteredMovies = [];
     let streamingServices = [];
 
@@ -82,10 +75,7 @@ async function filterAndSortMovies() {
         if (tableOption === 'userRatings' && !userMovies.has(movie.Const)) {
             continue;
         }
-        if (movie.Streaming === undefined || movie.Streaming === null || movie.Streaming === 'n/a') {
-            movie.Streaming = 'Buy or Rent';
-        }
-        if (!showWatched && userMovies.has(movie.Const)) {
+        if (!showWatched && (userMovies.has(movie.Const) || (tableOption === 'topTV' && userTVShows.has(movie.Const)))) {
             continue;
         }
         if (hideBeforeYear && parseInt(movie.Year) < hideBeforeYear) {
@@ -93,7 +83,7 @@ async function filterAndSortMovies() {
         }
         if (streamingServices.length > 0 && !streamingServices.includes(movie.Streaming) && movie.Streaming && !(movie.Streaming === 'Not found' && streamingServices.includes('Buy or Rent'))) {
             continue;
-        }        
+        }  
         if (genresToExclude.length > 0) {
             let found = false;
             for (const genre of genresToExclude) {
@@ -129,10 +119,10 @@ async function filterAndSortMovies() {
             return b.userRating - a.userRating;
         });
     }
-    
-    console.log("load 5");
     await displayMovies(filteredMovies);
 }
+
+
 
 function userRatingsUpload() {
     let file = document.getElementById('userRatingsFile').files[0];
@@ -179,7 +169,7 @@ function handleFileUpload(event) {
 function saveUserMovies() {
     localStorage.setItem('userMovies', JSON.stringify(Array.from(userMovies)));
     localStorage.setItem('userRatedMovies', JSON.stringify(userRatedMovies));
-
+    localStorage.setItem('userTVShows', JSON.stringify(Array.from(userTVShows))); // Save seen TV shows
 }
 
 function loadUserMovies() {
@@ -191,9 +181,12 @@ function loadUserMovies() {
     if (storedUserRatedMovies) {
         userRatedMovies = JSON.parse(storedUserRatedMovies);
     }
+    const storedUserTVShows = localStorage.getItem('userTVShows');
+    if (storedUserTVShows) {
+        userTVShows = new Set(JSON.parse(storedUserTVShows));
+    }
 }
 
-// Add this JavaScript function to toggle the filters sidebar on mobile
 function toggleFiltersSidebar() {
     const sidebar = document.querySelector(".sidebar");
     const mainContent = document.querySelector(".main");
@@ -202,12 +195,12 @@ function toggleFiltersSidebar() {
     if (sidebar.style.display === "block") {
         sidebar.style.display = "none";
         FilterButtonR.textContent = "Filters"
-        mainContent.style.display = "block"; // Show the main content when hiding the sidebar
+        mainContent.style.display = "block"; 
     } else {
         sidebar.style.display = "block";
         FilterButtonR.textContent = "Save"
         SearchBoxR.style.display = "none"
-        mainContent.style.display = "none"; // Hide the main content when showing the sidebar
+        mainContent.style.display = "none";
     }
 }  
 
@@ -223,7 +216,6 @@ function saveFilters() {
     $('input[id^="streaming"]:checked').each(function () {
         checkedStreamingServices.push($(this).val());
     });
-
     localStorage.setItem('filters', JSON.stringify(filterState));
     localStorage.setItem('checkedStreamingServices', JSON.stringify(checkedStreamingServices));
 }
@@ -250,7 +242,15 @@ function loadCheckedStreamingServices() {
     }
 }
 
+let topTVShows = [];
+function loadTopTV() {
+    loadCSV('top_TV_post.csv', (shows) => {
+        topTVShows = shows.filter(show => show.Const);
+    });
+}
+
 $(document).ready(function () {
+    loadTopTV();
     loadCSV('imdb_data_csv_Bigo.csv', (movies) => {
         top500Movies = movies.filter(row => row.Const);
         loadUserMovies();
@@ -269,55 +269,44 @@ $(document).ready(function () {
     $('#streamingServices').on('change', filterAndSortMovies);
     $('#search').on('input', filterAndSortMovies);
     $('#search2').on('input', filterAndSortMovies);
-    $('#movieTable').on('input', '.user-rating', function () {
+
+    // Add these event listeners to apply the filters and sorting to the topTV table as well.
+    $('#filter').on('input', () => { saveFilters(); filterAndSortMovies(); });
+    $('#sort').on('change', () => { saveFilters(); filterAndSortMovies(); });
+    $('#showWatched').on('change', function () { saveFilters(); filterAndSortMovies(); });
+    $('#hideBeforeYear').on('input', () => { saveFilters(); filterAndSortMovies(); });
+    $('#tableOption').on('change', () => { saveFilters(); filterAndSortMovies(); });
+    $('#streamingServices').on('change', filterAndSortMovies);
+    $('#search').on('input', filterAndSortMovies);
+    $('#search2').on('input', filterAndSortMovies);
+    $('#movieTable').on('change', '.watched-checkbox', async function () {
         let movieConst = $(this).data('const');
-        let newRating = parseInt($(this).text().trim());
-    
-        if ($(this).text().trim() === '') {
-            userRatedMovies = userRatedMovies.filter(movie => movie.Const !== movieConst);
-        } else if (!isNaN(newRating) && newRating >= 1 && newRating <= 10) {
-            let movie = userRatedMovies.find(movie => movie.Const === movieConst);
-    
-            if (movie) {
-                movie['Your Rating'] = newRating;
+        let isTopTV = ($('#tableOption').val() === 'topTV');
+        if ($(this).is(':checked')) {
+            if (isTopTV) {
+                userTVShows.add(movieConst);
             } else {
-                let movieToAdd = top500Movies.find(movie => movie.Const === movieConst);
-                if (movieToAdd) {
-                    userRatedMovies.push({ Const: movieToAdd.Const, 'Your Rating': newRating });
-                }
+                userMovies.add(movieConst);
             }
         } else {
-            $(this).text(getUserRating(movieConst));
-        }
-        saveUserMovies();
-    });
-    $('#movieTable').on('change', '.watched-checkbox', function () {
-        let movieConst = $(this).data('const');
-        let isChecked = $(this).prop('checked');
-    
-        if (isChecked) {
-            userMovies.add(movieConst);
-        } else {
             userMovies.delete(movieConst);
+            userTVShows.delete(movieConst);
         }
-    
         saveUserMovies();
-        filterAndSortMovies();
-    });    
+        if (isTopTV) {
+            filterAndSortMovies(topTVShows);
+        } else {
+            filterAndSortMovies();
+        }
+    });
+     
     $('#showAllMovies').on('click', function () {
-        // Uncheck all streaming services checkboxes
         $('#streamingServices input:checked').prop('checked', false);
-        
-        // Clear input fields
         $('#filter').val('');
         $('#hideBeforeYear').val('');
-        
-        // Set table option to "top500" and sort by IMDb rating
         $('#tableOption').val('top500');
         $('#sort').val('rating');
         $('#showWatched').prop('checked', true);
-        
-        // Save filters and refresh the table
         saveFilters();
         filterAndSortMovies();
     });

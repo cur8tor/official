@@ -199,6 +199,12 @@ tr {
   text-align: left;
   vertical-align: center;
 }
+/* Set the width of the Year column */
+#movieTable th:nth-child(9), td:nth-child(9) {
+  width: 2%;
+  text-align: left;
+  vertical-align: center;
+}
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
