@@ -19,6 +19,10 @@ body {
   min-width: 350px;
 }
 
+a{
+  color: white;
+}
+
 .sidebar {
   position: fixed;
   left: 0;

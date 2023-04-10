@@ -62,6 +62,10 @@ async function filterAndSortMovies(moviesSource = top500Movies) {
     }
 
     let sourceMovies = tableOption === 'topTV' ? topTVShows : moviesSource; // Change this line to use your top TV shows variable
+    
+    if (tableOption === 'Curator') {
+        sourceMovies = tableOption === 'Curator' ? curatorList : moviesSource;
+    }
 
     let filteredMovies = [];
     let streamingServices = [];
@@ -76,7 +80,7 @@ async function filterAndSortMovies(moviesSource = top500Movies) {
         if (tableOption === 'userRatings' && !userMovies.has(movie.Const)) {
             continue;
         }
-        if (!showWatched && (userMovies.has(movie.Const) || (tableOption === 'topTV' && userTVShows.has(movie.Const)))) {
+        if (!showWatched && (userMovies.has(movie.Const) || (tableOption === 'topTV' && userTVShows.has(movie.Const)) || ((tableOption === 'Curator' && userTVShows.has(movie.Const)) || (tableOption === 'Curator' && userMovies.has(movie.Const))  ))) {
             continue;
         }
         if (hideBeforeYear && parseInt(movie.Year) < hideBeforeYear) {
@@ -271,8 +275,16 @@ function loadTopTV() {
     });
 }
 
+let curatorList = [];
+function loadCuratorList() {
+    loadCSV('2curatorWatchlist.csv', (shows) => {
+        curatorList = shows.filter(show => show.Const);
+    });
+}
+
 $(document).ready(function () {
     loadTopTV();
+    loadCuratorList()
     loadCSV('imdb_data_csv_Bigo.csv', (movies) => {
         top500Movies = movies.filter(row => row.Const);
         loadUserMovies();
