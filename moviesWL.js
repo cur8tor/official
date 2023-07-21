@@ -190,6 +190,8 @@ function loadUserMovies() {
     }
 }
 
+
+
 function toggleFiltersSidebar() {
     const sidebar = document.querySelector(".sidebar");
     const mainContent = document.querySelector(".main");

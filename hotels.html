@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <table id="hotelTable">
+    <tr>
+      <th>PROPERTY NAME</th>
+      <th>CITY</th>
+    </tr>
+  </table>
+
+  <script>
+    // Read the CSV file
+    fetch('hotels.csv')
+      .then(response => response.text())
+      .then(data => {
+        // Parse the CSV data using PapaParse
+        const hotels = Papa.parse(data, { header: true }).data;
+        
+        // Generate the table rows dynamically
+        const table = document.getElementById('hotelTable');
+        hotels.forEach(hotel => {
+          const row = document.createElement('tr');
+          const nameCell = document.createElement('td');
+          const cityCell = document.createElement('td');
+          nameCell.textContent = hotel['PROPERTY NAME'];
+          cityCell.textContent = hotel['CITY'];
+          row.appendChild(nameCell);
+          row.appendChild(cityCell);
+          table.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>

@@ -408,7 +408,7 @@ input[type="submit"]:hover {
 }
 
 /* Media queries */
-@media screen and (max-width: 2001px) {
+@media screen and (max-width: 5001px) {
   .sidebar {
     position: fixed;
     left: 0;
@@ -548,7 +548,7 @@ input[type="submit"]:hover {
 
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 5000px) {
   .sidebar {
     height: 100vh;
     padding: 2rem;

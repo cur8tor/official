@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistics Display</title>
+    <style>
+        /* Add some basic styling to the marquee */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Futura Condensed', sans-serif;
+            text-transform: uppercase;
+        }
+        .marquee {
+            width: 100%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="stats-display"></div>
+
+    <script>
+        // Assume the JSON data is in a file named "stats.json"
+        fetch('stats.json')
+            .then(response => response.json())
+            .then(data => {
+                let statsDisplay = document.getElementById('stats-display');
+                let allStatsText = "";
+                data.forEach(stat => {
+                    let statText = `City: ${stat.City}, State: ${stat.State}, Crime: ${stat.Crime}, Amount/deaths: ${stat["Amount\/deaths"]}, STR: ${stat.STR}. `;
+                    allStatsText += statText;
+                });
+                let marquee = document.createElement('marquee');
+                marquee.setAttribute('scrollamount', '20');  // Make the marquee scroll faster
+                marquee.textContent = allStatsText;
+                marquee.classList.add('marquee');
+                statsDisplay.appendChild(marquee);
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
